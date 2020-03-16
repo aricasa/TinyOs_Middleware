@@ -10,8 +10,9 @@ import sys
 
 t = Tossim([])
 r = t.radio()
-f = open("topology.txt", "r")
 
+#Add routes between nodes from file
+f = open("topology.txt", "r")
 for line in f:
   s = line.split()
   if s:
@@ -20,6 +21,7 @@ for line in f:
 
 t.addChannel("Temp", sys.stdout)
 
+#Add noise model from file
 noise = open("meyer-heavy.txt", "r")
 for line in noise:
   str1 = line.strip()
@@ -32,6 +34,7 @@ for i in range(1, 15):
   print "Creating noise model for ",i;
   t.getNode(i).createNoiseModel()
 
+#Add nodes
 t.getNode(1).bootAtTime(100001);
 t.getNode(2).bootAtTime(800008);
 t.getNode(3).bootAtTime(1800009);
@@ -50,13 +53,9 @@ t.getNode(14).bootAtTime(3000009);
 t.runNextEvent();
 time = t.time()
 
-var = 0
-
+#Show output of nodes
 while time + 5000000000000 > t.time():
-      var = var +1
       t.runNextEvent()
+      
   
-print("ci sono righe %d \n", var)
-  
-
 print "							END OF PROGRAM					"

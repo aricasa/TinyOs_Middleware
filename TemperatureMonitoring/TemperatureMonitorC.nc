@@ -1,8 +1,5 @@
 #include "TemperatureMonitor.h"
 
-#include <printf.h>
-#define PRINTF(...) printf(__VA_ARGS__); printfflush()
-
 module TemperatureMonitorC {
   uses {
     interface Boot;
@@ -19,14 +16,20 @@ module TemperatureMonitorC {
 
 implementation {
 
+  /* Last value of temperature measured */
   uint16_t temperature;
+  
+  /* Threshold value of temperature*/
   uint16_t threshold;
+  
+  /* Node used to forward DATA messages */
   uint16_t routeBackNode=1;
   
   message_t pkt;
+  
   bool busy;
   
-  //Data message
+  /* Data message */
   uint16_t sender;
   uint16_t temp;
   
@@ -49,7 +52,6 @@ implementation {
  	dbg("Temp", "Sending DATA msg: sender %d , measured value %d \n", msg->sender, msg->temperature);
     if (call AMSend.send(routeBackNode, &pkt, sizeof(DATAmsg))==SUCCESS) {
       
-      //dbg("Temp", "Busy true \n");
       busy = TRUE;
     }
   }
@@ -74,7 +76,6 @@ implementation {
     dbg("Temp", "Sending SETUP msg: threshold = %d \n", msg->threshold);
   
     if (call AMSend.send(AM_BROADCAST_ADDR, &pkt, sizeof(SETUPmsg))==SUCCESS) {
-      //dbg("Temp", "Busy true \n");
       busy = TRUE;
     }
   }
@@ -82,7 +83,7 @@ implementation {
   event void AMSend.sendDone(message_t* msg, error_t err) {
     if (&pkt==msg) {
       busy = FALSE;
-     // dbg("Temp", "Busy false \n");
+     
     }
   }
 
@@ -114,31 +115,34 @@ implementation {
   
   event void TimerGenerateNewThreshold.fired()
   {
+  	/* check if node is the sink node */
     if(TOS_NODE_ID==1)
     {
-    	threshold = (rand() % (200 - 150 + 1)) + 150; 
-    	//threshold = rand();
-    	dbg("Temp", "New threshold value: %d %d \n", TOS_NODE_ID, threshold);
-    	
+    	threshold = (rand() % (MAX_TEMPERATURE_threshold - MIN_TEMPERATURE_threshold + 1)) + MIN_TEMPERATURE_threshold; 
+ 
+    	dbg("Temp", "New threshold value: %d \n", threshold);
     	
     	if (!busy)      		
     		post sendSetupMessage();
-    	//else
-    	//	dbg("Temp", "Busy true \n");
     }
    
   }
   
-  event void TimerMeasureTemperature.fired() {
+  event void TimerMeasureTemperature.fired() 
+  {
   
+  	/* check if the node is NOT the sink one (only non-sink node read from sensors) */
   	if(TOS_NODE_ID!=1) {
   
-  		temperature = (rand() % (180 - 0 + 1)) + 0;
+  		/* comment if you want that the temperature is randomly generated */
+  		temperature = (rand() % (MAX_TEMPERATURE_sensor - MIN_TEMPERATURE_sensor + 1)) + MIN_TEMPERATURE_sensor;
   		dbg("Temp", "Temperature found : %u \n", temperature);
   		sender=TOS_NODE_ID;
   		temp=temperature;
   		if(temperature >= threshold)
       		post sendDataMessage();
+      		
+      	/* remove comment if you want that the temperature is read by the sensor */
     	//call Temperature.read();
     }
   }
@@ -146,51 +150,49 @@ implementation {
   event void Temperature.readDone(error_t result, uint16_t val) {
     
     if(result == SUCCESS) {
-      temperature = val-3960;  // celsius = -39.6 + T*0.01
       dbg("Temp", "Temperature found : %u \n", temperature);
-      //if(TOS_NODE_ID==3) temperature = (uint16_t) rintf(temperature + (2944.4-temperature)/55.76);
       if(temperature >= threshold)
       	post sendDataMessage();
     }
    
   }
   
-    event message_t* Receive.receive(message_t* p, void* payload, uint8_t len) {
-    
-    if (len == sizeof(DATAmsg)) 
+    event message_t* Receive.receive(message_t* p, void* payload, uint8_t len) 
     {
-      DATAmsg* msg = (DATAmsg *) payload;
-      dbg("Temp", "Received from node %d the measured value %d of node %d \n", msg->node_id, msg->temperature, msg->sender);
+    	/* The incoming message is processed depending on the type message */
+    	if (len == sizeof(DATAmsg)) 
+    	{
+      
+      		DATAmsg* msg = (DATAmsg *) payload;
+     		dbg("Temp", "Received from node %d the measured value %d of node %d \n", msg->node_id, msg->temperature, msg->sender);
       
       
-      if(TOS_NODE_ID!=1)
-      {
+      			if(TOS_NODE_ID!=1)
+     			{		
       	
-      	sender= msg->sender;
-      	temp= msg->temperature;
+      				sender= msg->sender;
+      				temp= msg->temperature;
       	 
-      	post sendDataMessage();
-      }
+      				post sendDataMessage();
+      			}
       
-      
-    }
-    else if(len == sizeof(SETUPmsg) && TOS_NODE_ID!=1 ) 
-    {
+    	}
+   		else if(len == sizeof(SETUPmsg)) 
+    	{
     
-      SETUPmsg* setupMsg = (SETUPmsg *) payload;
+     		SETUPmsg* setupMsg = (SETUPmsg *) payload;
       
-      if(TOS_NODE_ID!=setupMsg->father)
-      {
-	      dbg("Temp", "Received from node %d the new threshold %d \n", setupMsg->node_id, setupMsg->threshold);
-	      dbg("Temp", "Setting route back to %d \n", setupMsg->node_id);
-	      threshold=setupMsg->threshold;
-	      routeBackNode=setupMsg->node_id;
+      			if(TOS_NODE_ID!=setupMsg->father && TOS_NODE_ID!=1 )
+      			{
+	      			dbg("Temp", "Received from node %d the new threshold %d --> setting route back to %d \n", setupMsg->node_id, setupMsg->threshold, setupMsg->node_id);
+	      			threshold=setupMsg->threshold;
+	      			routeBackNode=setupMsg->node_id;
 	      
-	      post sendSetupMessage();
-      }
+	     			 post sendSetupMessage();
+      			}
       
       
-    }
+    	}
     return p;
   } 
   

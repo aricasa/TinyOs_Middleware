@@ -12,6 +12,8 @@
 #define MAX_TEMPERATURE_sensor 180
 #define MIN_TEMPERATURE_sensor 0
 
+#define QUEUE_LENGTH 10
+
 
 /* DATA message : message sent by the node "node_id" to the sink node
  * containing the temperature "temperature" measured by the node "sender"

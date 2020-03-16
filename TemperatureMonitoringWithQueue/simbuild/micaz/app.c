@@ -766,7 +766,7 @@ extern void *malloc(size_t __size) __attribute((__leaf__)) __attribute((__nothro
 #line 444
 extern void free(void *__ptr) __attribute((__leaf__)) __attribute((__nothrow__)) ;
 #line 702
-typedef int (*__compar_fn_t)(const void *arg_0x7fb2e1bcd020, const void *arg_0x7fb2e1bcd2f8);
+typedef int (*__compar_fn_t)(const void *arg_0x7f50e5713020, const void *arg_0x7f50e57132f8);
 #line 740
 __extension__ 
 #line 757
@@ -784,7 +784,7 @@ extern double sqrt(double __x) __attribute((__leaf__)) __attribute((__nothrow__)
 #line 184
 extern double floor(double __x) __attribute((__leaf__)) __attribute((__nothrow__)) __attribute((const)) ;
 #line 260
-extern double erfc(double arg_0x7fb2e1b4a9c8) __attribute((__leaf__)) __attribute((__nothrow__)) ;
+extern double erfc(double arg_0x7f50e56909c8) __attribute((__leaf__)) __attribute((__nothrow__)) ;
 #line 343
 __extension__ 
 
@@ -1179,8 +1179,8 @@ typedef struct hashtable hashtable_t;
 #line 78
 struct hashtable *
 create_hashtable(unsigned int minsize, 
-unsigned int (*hashfunction)(void *arg_0x7fb2e19048e8), 
-int (*key_eq_fn)(void *arg_0x7fb2e19030c8, void *arg_0x7fb2e1903368));
+unsigned int (*hashfunction)(void *arg_0x7f50e544a8e8), 
+int (*key_eq_fn)(void *arg_0x7f50e54490c8, void *arg_0x7f50e5449368));
 #line 103
 #line 102
 int 
@@ -1216,7 +1216,7 @@ typedef struct sim_log_channel {
 } sim_log_channel_t;
 
 enum __nesc_unnamed4269 {
-  SIM_LOG_OUTPUT_COUNT = 191U
+  SIM_LOG_OUTPUT_COUNT = 195U
 };
 
 sim_log_output_t outputs[SIM_LOG_OUTPUT_COUNT];
@@ -1793,7 +1793,7 @@ struct tm;
 
 struct tm;
 # 46 "/usr/src/tinyos/tos/lib/tossim/randomlib.h"
-static inline void RandomInitialise(int arg_0x7fb2e1701610, int arg_0x7fb2e1701878);
+static inline void RandomInitialise(int arg_0x7f50e5247610, int arg_0x7f50e5247878);
 static double RandomUniform(void );
 # 51 "/usr/src/tinyos/tos/lib/tossim/sim_noise.c"
 int numCase1 = 0;
@@ -2145,8 +2145,8 @@ enum __nesc_unnamed4276 {
 typedef uint8_t error_t  ;
 
 static inline error_t ecombine(error_t r1, error_t r2)  ;
-# 25 "TemperatureMonitor.h"
-#line 19
+# 27 "TemperatureMonitor.h"
+#line 21
 typedef nx_struct DATAmsg {
 
   nx_uint16_t node_id;
@@ -2164,7 +2164,7 @@ DATAmsg;
 
 
 
-#line 30
+#line 32
 typedef nx_struct SETUPmsg {
 
   nx_uint16_t node_id;
@@ -3619,11 +3619,13 @@ enum AMQueueP$__nesc_unnamed4323 {
 typedef uint16_t /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$width_t;
 typedef /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$width_t /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$Read$val_t;
 # 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
-static void TemperatureMonitorC$sendDataMessage$runTask(void );
+static void TemperatureMonitorC$incStart$runTask(void );
 # 113 "/usr/src/tinyos/tos/interfaces/SplitControl.nc"
 static void TemperatureMonitorC$AMControl$startDone(error_t error);
 #line 138
 static void TemperatureMonitorC$AMControl$stopDone(error_t error);
+# 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+static void TemperatureMonitorC$incEnd$runTask(void );
 # 60 "/usr/src/tinyos/tos/interfaces/Boot.nc"
 static void TemperatureMonitorC$Boot$booted(void );
 # 110 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
@@ -3660,6 +3662,8 @@ uint8_t len);
 static void TemperatureMonitorC$TimerMeasureTemperature$fired(void );
 # 63 "/usr/src/tinyos/tos/interfaces/Read.nc"
 static void TemperatureMonitorC$Temperature$readDone(error_t result, TemperatureMonitorC$Temperature$val_t val);
+# 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+static void TemperatureMonitorC$sendDataMessage$runTask(void );
 # 83 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
 static void TemperatureMonitorC$TimerGenerateNewThreshold$fired(void );
 # 62 "/usr/src/tinyos/tos/interfaces/Init.nc"
@@ -3677,11 +3681,11 @@ static error_t MeasureClockC$Init$init(void );
 # 67 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
 static error_t SimSchedulerBasicP$TaskBasic$postTask(
 # 49 "/usr/src/tinyos/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x7fb2e15f1ab0);
+uint8_t arg_0x7f50e5137ab0);
 # 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$default$runTask(
 # 49 "/usr/src/tinyos/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x7fb2e15f1ab0);
+uint8_t arg_0x7f50e5137ab0);
 # 57 "/usr/src/tinyos/tos/interfaces/Scheduler.nc"
 static void SimSchedulerBasicP$Scheduler$init(void );
 
@@ -3711,7 +3715,7 @@ static long long int SimMoteP$SimMote$getStartTime(void );
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 static error_t TossimActiveMessageC$AMSend$send(
 # 47 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e1299060, 
+am_id_t arg_0x7f50e4dd2060, 
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -3734,7 +3738,7 @@ message_t *
 
 TossimActiveMessageC$Snoop$default$receive(
 # 49 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e1298ce8, 
+am_id_t arg_0x7f50e4dd1ce8, 
 # 71 "/usr/src/tinyos/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3781,7 +3785,7 @@ message_t *
 
 TossimActiveMessageC$Receive$default$receive(
 # 48 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e12981a0, 
+am_id_t arg_0x7f50e4dd11a0, 
 # 71 "/usr/src/tinyos/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3943,17 +3947,17 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fire
 #line 83
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(
 # 48 "/usr/src/tinyos/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x7fb2e0eb1c28);
+uint8_t arg_0x7f50e49eac28);
 # 64 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodic(
 # 48 "/usr/src/tinyos/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x7fb2e0eb1c28, 
+uint8_t arg_0x7f50e49eac28, 
 # 64 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
 uint32_t dt);
 #line 78
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(
 # 48 "/usr/src/tinyos/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x7fb2e0eb1c28);
+uint8_t arg_0x7f50e49eac28);
 # 82 "/usr/src/tinyos/tos/lib/timer/Counter.nc"
 static void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void );
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
@@ -3980,7 +3984,7 @@ error_t error);
 # 110 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(
 # 48 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x7fb2e0e12020, 
+am_id_t arg_0x7f50e494b020, 
 # 103 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -3993,7 +3997,7 @@ error_t error);
 # 75 "/usr/src/tinyos/tos/interfaces/Send.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(
 # 46 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x7fb2e0e15e18, 
+uint8_t arg_0x7f50e494ee18, 
 # 67 "/usr/src/tinyos/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4007,7 +4011,7 @@ uint8_t len);
 #line 100
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(
 # 46 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x7fb2e0e15e18, 
+uint8_t arg_0x7f50e494ee18, 
 # 96 "/usr/src/tinyos/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4021,9 +4025,11 @@ static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void );
 #line 75
 static void /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$senseResult$runTask(void );
 #line 67
-static error_t TemperatureMonitorC$sendDataMessage$postTask(void );
+static error_t TemperatureMonitorC$incStart$postTask(void );
 # 104 "/usr/src/tinyos/tos/interfaces/SplitControl.nc"
 static error_t TemperatureMonitorC$AMControl$start(void );
+# 67 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+static error_t TemperatureMonitorC$incEnd$postTask(void );
 # 126 "/usr/src/tinyos/tos/interfaces/Packet.nc"
 static 
 #line 123
@@ -4057,23 +4063,52 @@ static error_t TemperatureMonitorC$sendSetupMessage$postTask(void );
 static void TemperatureMonitorC$TimerMeasureTemperature$startPeriodic(uint32_t dt);
 #line 78
 static void TemperatureMonitorC$TimerMeasureTemperature$stop(void );
-#line 64
+# 67 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+static error_t TemperatureMonitorC$sendDataMessage$postTask(void );
+# 64 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
 static void TemperatureMonitorC$TimerGenerateNewThreshold$startPeriodic(uint32_t dt);
 #line 78
 static void TemperatureMonitorC$TimerGenerateNewThreshold$stop(void );
-# 37 "TemperatureMonitorC.nc"
+# 41 "TemperatureMonitorC.nc"
 enum TemperatureMonitorC$__nesc_unnamed4324 {
-#line 37
-  TemperatureMonitorC$sendDataMessage = 0U
+#line 41
+  TemperatureMonitorC$incStart = 0U
 };
-#line 37
-typedef int TemperatureMonitorC$__nesc_sillytask_sendDataMessage[TemperatureMonitorC$sendDataMessage];
-#line 60
+#line 41
+typedef int TemperatureMonitorC$__nesc_sillytask_incStart[TemperatureMonitorC$incStart];
+
+
+
+
+
+
+
 enum TemperatureMonitorC$__nesc_unnamed4325 {
-#line 60
-  TemperatureMonitorC$sendSetupMessage = 1U
+#line 49
+  TemperatureMonitorC$incEnd = 1U
 };
-#line 60
+#line 49
+typedef int TemperatureMonitorC$__nesc_sillytask_incEnd[TemperatureMonitorC$incEnd];
+
+
+
+
+
+
+
+
+enum TemperatureMonitorC$__nesc_unnamed4326 {
+#line 58
+  TemperatureMonitorC$sendDataMessage = 2U
+};
+#line 58
+typedef int TemperatureMonitorC$__nesc_sillytask_sendDataMessage[TemperatureMonitorC$sendDataMessage];
+#line 78
+enum TemperatureMonitorC$__nesc_unnamed4327 {
+#line 78
+  TemperatureMonitorC$sendSetupMessage = 3U
+};
+#line 78
 typedef int TemperatureMonitorC$__nesc_sillytask_sendSetupMessage[TemperatureMonitorC$sendSetupMessage];
 #line 20
 uint16_t TemperatureMonitorC$temperature[1000];
@@ -4084,21 +4119,41 @@ uint16_t TemperatureMonitorC$threshold[1000];
 
 uint16_t TemperatureMonitorC$routeBackNode[1000];
 
-message_t TemperatureMonitorC$pkt[1000];
 
-bool TemperatureMonitorC$busy[1000];
+message_t TemperatureMonitorC$packets[1000][10];
+
+
+uint8_t TemperatureMonitorC$start[1000];
+
+
+uint8_t TemperatureMonitorC$end[1000];
 
 
 uint16_t TemperatureMonitorC$sender[1000];
 uint16_t TemperatureMonitorC$temp[1000];
 
+static inline void TemperatureMonitorC$incStart$runTask(void );
+
+
+
+
+
+
+
+static inline void TemperatureMonitorC$incEnd$runTask(void );
+
+
+
+
+
+
+
 
 static inline void TemperatureMonitorC$sendDataMessage$runTask(void );
-#line 60
+#line 78
 static inline void TemperatureMonitorC$sendSetupMessage$runTask(void );
-#line 83
+#line 98
 static inline void TemperatureMonitorC$AMSend$sendDone(message_t *msg, error_t err);
-
 
 
 
@@ -4130,12 +4185,12 @@ static inline void TemperatureMonitorC$AMControl$stopDone(error_t err);
 
 
 
-static inline void TemperatureMonitorC$TimerGenerateNewThreshold$fired(void );
-#line 131
-static inline void TemperatureMonitorC$TimerMeasureTemperature$fired(void );
-#line 150
-static inline void TemperatureMonitorC$Temperature$readDone(error_t result, uint16_t val);
 
+static inline void TemperatureMonitorC$TimerGenerateNewThreshold$fired(void );
+#line 145
+static inline void TemperatureMonitorC$TimerMeasureTemperature$fired(void );
+#line 163
+static inline void TemperatureMonitorC$Temperature$readDone(error_t result, uint16_t val);
 
 
 
@@ -4189,13 +4244,13 @@ int sim_main_start_mote(void )   ;
 # 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$runTask(
 # 49 "/usr/src/tinyos/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0x7fb2e15f1ab0);
+uint8_t arg_0x7f50e5137ab0);
 
 
 
-enum SimSchedulerBasicP$__nesc_unnamed4326 {
+enum SimSchedulerBasicP$__nesc_unnamed4328 {
 
-  SimSchedulerBasicP$NUM_TASKS = 10U, 
+  SimSchedulerBasicP$NUM_TASKS = 12U, 
   SimSchedulerBasicP$NO_TASK = 255
 };
 
@@ -4357,7 +4412,7 @@ static am_addr_t TossimActiveMessageC$amAddress(void );
 # 110 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 static void TossimActiveMessageC$AMSend$sendDone(
 # 47 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e1299060, 
+am_id_t arg_0x7f50e4dd2060, 
 # 103 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4376,7 +4431,7 @@ message_t *
 
 TossimActiveMessageC$Snoop$receive(
 # 49 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e1298ce8, 
+am_id_t arg_0x7f50e4dd1ce8, 
 # 71 "/usr/src/tinyos/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4395,7 +4450,7 @@ message_t *
 
 TossimActiveMessageC$Receive$receive(
 # 48 "/usr/src/tinyos/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0x7fb2e12981a0, 
+am_id_t arg_0x7f50e4dd11a0, 
 # 71 "/usr/src/tinyos/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4530,9 +4585,9 @@ double reverseGain);
 static bool TossimPacketModelC$GainRadioModel$clearChannel(void );
 static void TossimPacketModelC$GainRadioModel$setPendingTransmission(void );
 # 96 "/usr/src/tinyos/tos/lib/tossim/TossimPacketModelC.nc"
-enum TossimPacketModelC$__nesc_unnamed4327 {
+enum TossimPacketModelC$__nesc_unnamed4329 {
 #line 96
-  TossimPacketModelC$startDoneTask = 2U
+  TossimPacketModelC$startDoneTask = 4U
 };
 #line 96
 typedef int TossimPacketModelC$__nesc_sillytask_startDoneTask[TossimPacketModelC$startDoneTask];
@@ -4540,16 +4595,16 @@ typedef int TossimPacketModelC$__nesc_sillytask_startDoneTask[TossimPacketModelC
 
 
 
-enum TossimPacketModelC$__nesc_unnamed4328 {
+enum TossimPacketModelC$__nesc_unnamed4330 {
 #line 101
-  TossimPacketModelC$stopDoneTask = 3U
+  TossimPacketModelC$stopDoneTask = 5U
 };
 #line 101
 typedef int TossimPacketModelC$__nesc_sillytask_stopDoneTask[TossimPacketModelC$stopDoneTask];
 #line 145
-enum TossimPacketModelC$__nesc_unnamed4329 {
+enum TossimPacketModelC$__nesc_unnamed4331 {
 #line 145
-  TossimPacketModelC$sendDoneTask = 4U
+  TossimPacketModelC$sendDoneTask = 6U
 };
 #line 145
 typedef int TossimPacketModelC$__nesc_sillytask_sendDoneTask[TossimPacketModelC$sendDoneTask];
@@ -4797,7 +4852,7 @@ uint32_t /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAs
 
 
 
-enum /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$__nesc_unnamed4330 {
+enum /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$__nesc_unnamed4332 {
   Atm128AlarmAsyncP$0$MINDT = 2, 
   Atm128AlarmAsyncP$0$MAXT = 230
 };
@@ -5035,9 +5090,9 @@ static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop(void );
 # 83 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired(void );
 # 74 "/usr/src/tinyos/tos/lib/timer/AlarmToTimerC.nc"
-enum /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$__nesc_unnamed4331 {
+enum /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$__nesc_unnamed4333 {
 #line 74
-  AlarmToTimerC$0$fired = 5U
+  AlarmToTimerC$0$fired = 7U
 };
 #line 74
 typedef int /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$__nesc_sillytask_fired[/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired];
@@ -5077,16 +5132,16 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop
 
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(
 # 48 "/usr/src/tinyos/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x7fb2e0eb1c28);
+uint8_t arg_0x7f50e49eac28);
 #line 71
-enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4332 {
+enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4334 {
 #line 71
-  VirtualizeTimerC$0$updateFromTimer = 6U
+  VirtualizeTimerC$0$updateFromTimer = 8U
 };
 #line 71
 typedef int /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_sillytask_updateFromTimer[/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer];
 #line 53
-enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4333 {
+enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4335 {
 
   VirtualizeTimerC$0$NUM_TIMERS = 2U, 
   VirtualizeTimerC$0$END_OF_LIST = 255
@@ -5100,7 +5155,7 @@ enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4333 {
 
 
 #line 59
-typedef struct /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4334 {
+typedef struct /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4336 {
 
   uint32_t t0;
   uint32_t dt;
@@ -5204,7 +5259,7 @@ static inline void /*TemperatureMonitorAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQ
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(
 # 48 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x7fb2e0e12020, 
+am_id_t arg_0x7f50e494b020, 
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -5221,7 +5276,7 @@ uint8_t len);
 # 100 "/usr/src/tinyos/tos/interfaces/Send.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
 # 46 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x7fb2e0e15e18, 
+uint8_t arg_0x7f50e494ee18, 
 # 96 "/usr/src/tinyos/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -5251,22 +5306,22 @@ static am_id_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(
 #line 143
 message_t * amsg);
 # 126 "/usr/src/tinyos/tos/system/AMQueueImplP.nc"
-enum /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4335 {
+enum /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4337 {
 #line 126
-  AMQueueImplP$0$CancelTask = 7U
+  AMQueueImplP$0$CancelTask = 9U
 };
 #line 126
 typedef int /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_sillytask_CancelTask[/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask];
 #line 169
-enum /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4336 {
+enum /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4338 {
 #line 169
-  AMQueueImplP$0$errorTask = 8U
+  AMQueueImplP$0$errorTask = 10U
 };
 #line 169
 typedef int /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_sillytask_errorTask[/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask];
 #line 57
 #line 55
-typedef struct /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4337 {
+typedef struct /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4339 {
   message_t * msg;
 } /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue_entry_t;
 
@@ -5302,9 +5357,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone
 # 63 "/usr/src/tinyos/tos/interfaces/Read.nc"
 static void /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$Read$readDone(error_t result, /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$Read$val_t val);
 # 47 "/usr/src/tinyos/tos/system/ConstantSensorC.nc"
-enum /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$__nesc_unnamed4338 {
+enum /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$__nesc_unnamed4340 {
 #line 47
-  ConstantSensorC$0$senseResult = 9U
+  ConstantSensorC$0$senseResult = 11U
 };
 #line 47
 typedef int /*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$__nesc_sillytask_senseResult[/*TemperatureMonitorAppC.DemoSensorC.ConstantSensorC*/ConstantSensorC$0$senseResult];
@@ -5612,7 +5667,7 @@ static inline void TossimActiveMessageC$active_message_deliver_handle(sim_event_
   message_t *m = (message_t *)evt->data;
 
 #line 238
-  sim_log_debug(119U, "Packet", "Delivering packet to %i at %s\n", (int )sim_node(), sim_time_string());
+  sim_log_debug(123U, "Packet", "Delivering packet to %i at %s\n", (int )sim_node(), sim_time_string());
   TossimActiveMessageC$Model$receive(m);
 }
 
@@ -5725,45 +5780,48 @@ inline static error_t TemperatureMonitorC$sendDataMessage$postTask(void ){
 #line 67
 }
 #line 67
-# 160 "TemperatureMonitorC.nc"
+# 172 "TemperatureMonitorC.nc"
 static inline message_t *TemperatureMonitorC$Receive$receive(message_t *p, void *payload, uint8_t len)
 {
 
   if (len == sizeof(DATAmsg )) 
     {
-
       DATAmsg *msg = (DATAmsg *)payload;
 
-#line 167
-      sim_log_debug(55U, "Temp", "Received from node %d the measured value %d of node %d \n", __nesc_ntoh_uint16(msg->node_id.nxdata), __nesc_ntoh_uint16(msg->temperature.nxdata), __nesc_ntoh_uint16(msg->sender.nxdata));
+#line 178
+      sim_log_debug(56U, "PacketsLoss", "RECEIVED \n");
+      sim_log_debug(57U, "Temp", "Received from node %d the measured value %d of node %d \n", __nesc_ntoh_uint16(msg->node_id.nxdata), __nesc_ntoh_uint16(msg->temperature.nxdata), __nesc_ntoh_uint16(msg->sender.nxdata));
 
 
       if (TOS_NODE_ID != 1) 
         {
-
           TemperatureMonitorC$sender[sim_node()] = __nesc_ntoh_uint16(msg->sender.nxdata);
           TemperatureMonitorC$temp[sim_node()] = __nesc_ntoh_uint16(msg->temperature.nxdata);
-
           TemperatureMonitorC$sendDataMessage$postTask();
         }
     }
   else {
     if (len == sizeof(SETUPmsg )) 
       {
-
         SETUPmsg *setupMsg = (SETUPmsg *)payload;
+
+
+
 
         if (TOS_NODE_ID != __nesc_ntoh_uint8(setupMsg->father.nxdata) && TOS_NODE_ID != 1) 
           {
-            sim_log_debug(56U, "Temp", "Received from node %d the new threshold %d --> setting route back to %d \n", __nesc_ntoh_uint16(setupMsg->node_id.nxdata), __nesc_ntoh_uint16(setupMsg->threshold.nxdata), __nesc_ntoh_uint16(setupMsg->node_id.nxdata));
+            sim_log_debug(58U, "PacketsLoss", "RECEIVED \n");
+            sim_log_debug(59U, "Temp", "Received from node %d the new threshold %d --> setting route back to %d \n", __nesc_ntoh_uint16(setupMsg->node_id.nxdata), __nesc_ntoh_uint16(setupMsg->threshold.nxdata), __nesc_ntoh_uint16(setupMsg->node_id.nxdata));
             TemperatureMonitorC$threshold[sim_node()] = __nesc_ntoh_uint16(setupMsg->threshold.nxdata);
             TemperatureMonitorC$routeBackNode[sim_node()] = __nesc_ntoh_uint16(setupMsg->node_id.nxdata);
-
             TemperatureMonitorC$sendSetupMessage$postTask();
           }
       }
+    else {
+      sim_log_debug(60U, "Temp", "Unknown packet received. \n");
+      }
     }
-
+#line 209
   return p;
 }
 
@@ -5775,13 +5833,13 @@ static inline message_t *TossimActiveMessageC$Receive$default$receive(am_id_t id
 }
 
 # 78 "/usr/src/tinyos/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0x7fb2e12981a0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0x7f50e4dd11a0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x7fb2e12981a0) {
+  switch (arg_0x7f50e4dd11a0) {
 #line 78
     case 6:
 #line 78
@@ -5791,7 +5849,7 @@ inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0x7fb
 #line 78
     default:
 #line 78
-      __nesc_result = TossimActiveMessageC$Receive$default$receive(arg_0x7fb2e12981a0, msg, payload, len);
+      __nesc_result = TossimActiveMessageC$Receive$default$receive(arg_0x7f50e4dd11a0, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -5847,13 +5905,13 @@ static inline message_t *TossimActiveMessageC$Snoop$default$receive(am_id_t id, 
 }
 
 # 78 "/usr/src/tinyos/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0x7fb2e1298ce8, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0x7f50e4dd1ce8, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = TossimActiveMessageC$Snoop$default$receive(arg_0x7fb2e1298ce8, msg, payload, len);
+    __nesc_result = TossimActiveMessageC$Snoop$default$receive(arg_0x7f50e4dd1ce8, msg, payload, len);
 #line 78
 
 #line 78
@@ -5927,7 +5985,7 @@ static inline void SimSchedulerBasicP$sim_scheduler_event_init(sim_event_t *e)
 #line 166
 static inline void SimSchedulerBasicP$Scheduler$init(void )
 {
-  sim_log_debug(106U, "Scheduler", "Initializing scheduler.\n");
+  sim_log_debug(110U, "Scheduler", "Initializing scheduler.\n");
   /* atomic removed: atomic calls only */
   {
     memset(SimSchedulerBasicP$m_next[sim_node()], SimSchedulerBasicP$NO_TASK, sizeof SimSchedulerBasicP$m_next[sim_node()]);
@@ -5965,6 +6023,30 @@ static inline uint8_t SimSchedulerBasicP$popTask(void )
   else 
     {
       return SimSchedulerBasicP$NO_TASK;
+    }
+}
+
+# 41 "TemperatureMonitorC.nc"
+static inline void TemperatureMonitorC$incStart$runTask(void )
+{
+  if (TemperatureMonitorC$start[sim_node()] == 10 - 1) {
+    TemperatureMonitorC$start[sim_node()] = 0;
+    }
+  else {
+#line 46
+    TemperatureMonitorC$start[sim_node()]++;
+    }
+}
+
+#line 49
+static inline void TemperatureMonitorC$incEnd$runTask(void )
+{
+  if (TemperatureMonitorC$end[sim_node()] == 10 - 1) {
+    TemperatureMonitorC$end[sim_node()] = 0;
+    }
+  else {
+#line 54
+    TemperatureMonitorC$end[sim_node()]++;
     }
 }
 
@@ -6022,32 +6104,42 @@ inline static void * TemperatureMonitorC$Packet$getPayload(message_t * msg, uint
 #line 126
 }
 #line 126
-# 37 "TemperatureMonitorC.nc"
+# 67 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+inline static error_t TemperatureMonitorC$incEnd$postTask(void ){
+#line 67
+  unsigned char __nesc_result;
+#line 67
+
+#line 67
+  __nesc_result = SimSchedulerBasicP$TaskBasic$postTask(TemperatureMonitorC$incEnd);
+#line 67
+
+#line 67
+  return __nesc_result;
+#line 67
+}
+#line 67
+# 58 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$sendDataMessage$runTask(void )
-#line 37
 {
   DATAmsg *msg;
 
-  if (TemperatureMonitorC$busy[sim_node()]) 
-    {
-      sim_log_debug(46U, "Temp", "I'm busy!\n");
-      return;
-    }
+  TemperatureMonitorC$incEnd$postTask();
 
-  msg = (DATAmsg *)TemperatureMonitorC$Packet$getPayload(&TemperatureMonitorC$pkt[sim_node()], sizeof(DATAmsg ));
+  msg = (DATAmsg *)TemperatureMonitorC$Packet$getPayload(&TemperatureMonitorC$packets[sim_node()][TemperatureMonitorC$end[sim_node()]], sizeof(DATAmsg ));
   if (msg == (void *)0) {
-#line 47
+#line 65
     return;
     }
-#line 48
+#line 66
   __nesc_hton_uint16(msg->node_id.nxdata, TOS_NODE_ID);
   __nesc_hton_uint16(msg->temperature.nxdata, TemperatureMonitorC$temp[sim_node()]);
   __nesc_hton_uint16(msg->sender.nxdata, TemperatureMonitorC$sender[sim_node()]);
 
-  sim_log_debug(47U, "Temp", "Sending DATA msg: sender %d , measured value %d \n", __nesc_ntoh_uint16(msg->sender.nxdata), __nesc_ntoh_uint16(msg->temperature.nxdata));
-  if (TemperatureMonitorC$AMSend$send(TemperatureMonitorC$routeBackNode[sim_node()], &TemperatureMonitorC$pkt[sim_node()], sizeof(DATAmsg )) == SUCCESS) {
+  sim_log_debug(46U, "Temp", "Sending DATA msg: sender %d , measured value %d \n", __nesc_ntoh_uint16(msg->sender.nxdata), __nesc_ntoh_uint16(msg->temperature.nxdata));
 
-      TemperatureMonitorC$busy[sim_node()] = TRUE;
+  if (TemperatureMonitorC$AMSend$send(TemperatureMonitorC$routeBackNode[sim_node()], &TemperatureMonitorC$packets[sim_node()][TemperatureMonitorC$end[sim_node()]], sizeof(DATAmsg )) != SUCCESS) {
+    sim_log_debug(47U, "PacketsLoss", "FAILED TO SEND \n");
     }
 }
 
@@ -6062,31 +6154,28 @@ static __inline  uint8_t __nesc_hton_uint8(void * target, uint8_t value)
   return value;
 }
 
-# 60 "TemperatureMonitorC.nc"
+# 78 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$sendSetupMessage$runTask(void )
 {
   SETUPmsg *msg;
 
-  if (TemperatureMonitorC$busy[sim_node()]) 
-    {
-      sim_log_debug(48U, "Temp", "I'm busy!\n");
-      return;
-    }
+  TemperatureMonitorC$incEnd$postTask();
 
-  msg = (SETUPmsg *)TemperatureMonitorC$Packet$getPayload(&TemperatureMonitorC$pkt[sim_node()], sizeof(SETUPmsg ));
+  msg = (SETUPmsg *)TemperatureMonitorC$Packet$getPayload(&TemperatureMonitorC$packets[sim_node()][TemperatureMonitorC$end[sim_node()]], sizeof(SETUPmsg ));
   if (msg == (void *)0) {
-#line 71
+#line 85
     return;
     }
-#line 72
+#line 86
   __nesc_hton_uint16(msg->node_id.nxdata, TOS_NODE_ID);
   __nesc_hton_uint16(msg->threshold.nxdata, TemperatureMonitorC$threshold[sim_node()]);
   __nesc_hton_uint8(msg->father.nxdata, TemperatureMonitorC$routeBackNode[sim_node()]);
 
-  sim_log_debug(49U, "Temp", "Sending SETUP msg: threshold = %d \n", __nesc_ntoh_uint16(msg->threshold.nxdata));
 
-  if (TemperatureMonitorC$AMSend$send(AM_BROADCAST_ADDR, &TemperatureMonitorC$pkt[sim_node()], sizeof(SETUPmsg )) == SUCCESS) {
-      TemperatureMonitorC$busy[sim_node()] = TRUE;
+  sim_log_debug(48U, "Temp", "Sending SETUP msg: threshold = %d \n", __nesc_ntoh_uint16(msg->threshold.nxdata));
+
+  if (TemperatureMonitorC$AMSend$send(AM_BROADCAST_ADDR, &TemperatureMonitorC$packets[sim_node()][TemperatureMonitorC$end[sim_node()]], sizeof(SETUPmsg )) != SUCCESS) {
+    sim_log_debug(49U, "PacketsLoss", "FAILED TO SEND \n");
     }
 }
 
@@ -6118,17 +6207,17 @@ inline static void TemperatureMonitorC$TimerMeasureTemperature$startPeriodic(uin
 #line 64
 }
 #line 64
-# 100 "TemperatureMonitorC.nc"
+# 114 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$AMControl$startDone(error_t err)
-#line 100
+#line 114
 {
   if (err == SUCCESS) {
-      sim_log_debug(50U, "Temp", "Node %d started\n", TOS_NODE_ID);
+      sim_log_debug(51U, "Temp", "Node %d started\n", TOS_NODE_ID);
       TemperatureMonitorC$TimerMeasureTemperature$startPeriodic(6000);
       TemperatureMonitorC$TimerGenerateNewThreshold$startPeriodic(13000);
     }
   else 
-#line 105
+#line 119
     {
       TemperatureMonitorC$AMControl$start();
     }
@@ -6168,13 +6257,13 @@ inline static void TemperatureMonitorC$TimerMeasureTemperature$stop(void ){
 #line 78
 }
 #line 78
-# 110 "TemperatureMonitorC.nc"
+# 124 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$AMControl$stopDone(error_t err)
-#line 110
+#line 124
 {
   TemperatureMonitorC$TimerMeasureTemperature$stop();
   TemperatureMonitorC$TimerGenerateNewThreshold$stop();
-  sim_log_debug(51U, "Temp", "Node %d stopped\n", TOS_NODE_ID);
+  sim_log_debug(52U, "Temp", "Node %d stopped\n", TOS_NODE_ID);
 }
 
 # 138 "/usr/src/tinyos/tos/interfaces/SplitControl.nc"
@@ -6203,9 +6292,9 @@ static __inline  int8_t __nesc_hton_int8(void * target, int8_t value)
 }
 
 # 110 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
-inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0x7fb2e1299060, message_t * msg, error_t error){
+inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0x7f50e4dd2060, message_t * msg, error_t error){
 #line 110
-  /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x7fb2e1299060, msg, error);
+  /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x7f50e4dd2060, msg, error);
 #line 110
 }
 #line 110
@@ -6468,13 +6557,26 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(voi
   /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()], /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()]].msg, FAIL);
 }
 
-# 83 "TemperatureMonitorC.nc"
+# 67 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
+inline static error_t TemperatureMonitorC$incStart$postTask(void ){
+#line 67
+  unsigned char __nesc_result;
+#line 67
+
+#line 67
+  __nesc_result = SimSchedulerBasicP$TaskBasic$postTask(TemperatureMonitorC$incStart);
+#line 67
+
+#line 67
+  return __nesc_result;
+#line 67
+}
+#line 67
+# 98 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$AMSend$sendDone(message_t *msg, error_t err)
-#line 83
 {
-  if (&TemperatureMonitorC$pkt[sim_node()] == msg) {
-      TemperatureMonitorC$busy[sim_node()] = FALSE;
-    }
+  sim_log_debug(50U, "PacketsLoss", "SENT \n");
+  TemperatureMonitorC$incStart$postTask();
 }
 
 # 110 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
@@ -6498,9 +6600,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone
 }
 
 # 100 "/usr/src/tinyos/tos/interfaces/Send.nc"
-inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x7fb2e0e15e18, message_t * msg, error_t error){
+inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x7f50e494ee18, message_t * msg, error_t error){
 #line 100
-  switch (arg_0x7fb2e0e15e18) {
+  switch (arg_0x7f50e494ee18) {
 #line 100
     case 0U:
 #line 100
@@ -6510,7 +6612,7 @@ inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t
 #line 100
     default:
 #line 100
-      /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x7fb2e0e15e18, msg, error);
+      /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x7f50e494ee18, msg, error);
 #line 100
       break;
 #line 100
@@ -6548,13 +6650,11 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(vo
     }
 }
 
-# 150 "TemperatureMonitorC.nc"
+# 163 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$Temperature$readDone(error_t result, uint16_t val)
-#line 150
 {
-
   if (result == SUCCESS) {
-      sim_log_debug(54U, "Temp", "Temperature found : %u \n", TemperatureMonitorC$temperature[sim_node()]);
+      sim_log_debug(55U, "Temp", "Temperature found : %u \n", TemperatureMonitorC$temperature[sim_node()]);
       if (TemperatureMonitorC$temperature[sim_node()] >= TemperatureMonitorC$threshold[sim_node()]) {
         TemperatureMonitorC$sendDataMessage$postTask();
         }
@@ -6581,9 +6681,21 @@ static inline void SimSchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
 }
 
 # 75 "/usr/src/tinyos/tos/interfaces/TaskBasic.nc"
-inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x7fb2e15f1ab0){
+inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x7f50e5137ab0){
 #line 75
-  switch (arg_0x7fb2e15f1ab0) {
+  switch (arg_0x7f50e5137ab0) {
+#line 75
+    case TemperatureMonitorC$incStart:
+#line 75
+      TemperatureMonitorC$incStart$runTask();
+#line 75
+      break;
+#line 75
+    case TemperatureMonitorC$incEnd:
+#line 75
+      TemperatureMonitorC$incEnd$runTask();
+#line 75
+      break;
 #line 75
     case TemperatureMonitorC$sendDataMessage:
 #line 75
@@ -6647,7 +6759,7 @@ inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x7fb2e15f1a
 #line 75
     default:
 #line 75
-      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0x7fb2e15f1ab0);
+      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0x7f50e5137ab0);
 #line 75
       break;
 #line 75
@@ -6671,13 +6783,13 @@ inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$postTask
 }
 #line 67
 # 80 "/usr/src/tinyos/tos/interfaces/AMSend.nc"
-inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x7fb2e0e12020, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x7f50e494b020, am_addr_t addr, message_t * msg, uint8_t len){
 #line 80
   unsigned char __nesc_result;
 #line 80
 
 #line 80
-  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0x7fb2e0e12020, addr, msg, len);
+  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0x7f50e494b020, addr, msg, len);
 #line 80
 
 #line 80
@@ -6860,7 +6972,7 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
   CpmModelC$receive_message_t *predecessor = (void *)0;
   CpmModelC$receive_message_t *list = CpmModelC$outstandingReceptionHead[sim_node()];
 
-  sim_log_debug(139U, "CpmModelC", "Handling reception event @ %s.\n", sim_time_string());
+  sim_log_debug(143U, "CpmModelC", "Handling reception event @ %s.\n", sim_time_string());
   while (list != (void *)0) {
       if (list->next == mine) {
           predecessor = list;
@@ -6876,13 +6988,13 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
         CpmModelC$outstandingReceptionHead[sim_node()] = mine->next;
       }
     else {
-        sim_log_error(140U, "CpmModelC", "Incoming packet list structure is corrupted: entry is not the head and no entry points to it.\n");
+        sim_log_error(144U, "CpmModelC", "Incoming packet list structure is corrupted: entry is not the head and no entry points to it.\n");
       }
     }
 #line 317
-  sim_log_debug(141U, "CpmModelC,SNRLoss", "Packet from %i to %i\n", (int )mine->source, (int )sim_node());
+  sim_log_debug(145U, "CpmModelC,SNRLoss", "Packet from %i to %i\n", (int )mine->source, (int )sim_node());
   if (!CpmModelC$checkReceive(mine)) {
-      sim_log_debug(142U, "CpmModelC,SNRLoss", " - lost packet from %i as SNR was too low.\n", (int )mine->source);
+      sim_log_debug(146U, "CpmModelC,SNRLoss", " - lost packet from %i as SNR was too low.\n", (int )mine->source);
       mine->lost = 1;
     }
   if (! mine->lost) {
@@ -6894,17 +7006,17 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
 #line 327
       __nesc_hton_int8(meta->strength.nxdata, mine->strength);
 
-      sim_log_debug_clear(143U, "CpmModelC,SNRLoss", "  -signaling reception\n");
+      sim_log_debug_clear(147U, "CpmModelC,SNRLoss", "  -signaling reception\n");
       CpmModelC$Model$receive(mine->msg);
       if (mine->ack) {
-          sim_log_debug_clear(144U, "CpmModelC", " acknowledgment requested, ");
+          sim_log_debug_clear(148U, "CpmModelC", " acknowledgment requested, ");
         }
       else {
-          sim_log_debug_clear(145U, "CpmModelC", " no acknowledgment requested.\n");
+          sim_log_debug_clear(149U, "CpmModelC", " no acknowledgment requested.\n");
         }
 
       if (mine->ack && CpmModelC$Model$shouldAck(mine->msg)) {
-          sim_log_debug_clear(146U, "CpmModelC", " scheduling ack.\n");
+          sim_log_debug_clear(150U, "CpmModelC", " scheduling ack.\n");
           CpmModelC$sim_gain_schedule_ack(mine->source, sim_time() + 1, mine);
         }
       else {
@@ -6915,9 +7027,9 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
     }
   else {
       if (RandomUniform() < 0.001) {
-          sim_log_debug(147U, "CpmModelC,SNRLoss", "Packet was technically lost, but TOSSIM introduces an ack false positive rate.\n");
+          sim_log_debug(151U, "CpmModelC,SNRLoss", "Packet was technically lost, but TOSSIM introduces an ack false positive rate.\n");
           if (mine->ack && CpmModelC$Model$shouldAck(mine->msg)) {
-              sim_log_debug_clear(148U, "CpmModelC", " scheduling ack.\n");
+              sim_log_debug_clear(152U, "CpmModelC", " scheduling ack.\n");
               CpmModelC$sim_gain_schedule_ack(mine->source, sim_time() + 1, mine);
             }
           else {
@@ -6928,7 +7040,7 @@ static inline void CpmModelC$sim_gain_receive_handle(sim_event_t *evt)
           CpmModelC$free_receive_message(mine);
         }
       CpmModelC$receiving[sim_node()] = 0;
-      sim_log_debug_clear(149U, "CpmModelC,SNRLoss", "  -packet was lost.\n");
+      sim_log_debug_clear(153U, "CpmModelC,SNRLoss", "  -packet was lost.\n");
     }
 }
 
@@ -6984,25 +7096,25 @@ static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTim
 
 
   if (!sim_mote_is_on(sim_node())) {
-      sim_log_debug(150U, "CpmModelC", "Lost packet from %i due to %i being off\n", source, sim_node());
+      sim_log_debug(154U, "CpmModelC", "Lost packet from %i due to %i being off\n", source, sim_node());
       rcv->lost = 1;
     }
   else {
 #line 396
     if (!CpmModelC$shouldReceive(power - noiseStr)) {
-        sim_log_debug(151U, "CpmModelC,SNRLoss", "Lost packet from %i to %i due to SNR being too low (%i)\n", source, sim_node(), (int )(power - noiseStr));
+        sim_log_debug(155U, "CpmModelC,SNRLoss", "Lost packet from %i to %i due to SNR being too low (%i)\n", source, sim_node(), (int )(power - noiseStr));
         rcv->lost = 1;
       }
     else {
 #line 400
       if (CpmModelC$receiving[sim_node()]) {
-          sim_log_debug(152U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-reception\n", source, sim_node());
+          sim_log_debug(156U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-reception\n", source, sim_node());
           rcv->lost = 1;
         }
       else {
 #line 404
         if (CpmModelC$transmitting[sim_node()] && rcv->start < CpmModelC$transmissionEndTime[sim_node()] && CpmModelC$transmissionEndTime[sim_node()] <= rcv->end) {
-            sim_log_debug(153U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-transmission, transmissionEndTime %llu\n", source, sim_node(), CpmModelC$transmissionEndTime[sim_node()]);
+            sim_log_debug(157U, "CpmModelC,SNRLoss", "Lost packet from %i due to %i being mid-transmission, transmissionEndTime %llu\n", source, sim_node(), CpmModelC$transmissionEndTime[sim_node()]);
             rcv->lost = 1;
           }
         else {
@@ -7015,7 +7127,7 @@ static inline void CpmModelC$enqueue_receive_event(int source, sim_time_t endTim
   list = CpmModelC$outstandingReceptionHead[sim_node()];
   while (list != (void *)0) {
       if (!CpmModelC$shouldReceive(list->power - rcv->power)) {
-          sim_log_debug(154U, "Gain,SNRLoss", "Going to lose packet from %i with signal %lf as am receiving a packet from %i with signal %lf\n", list->source, list->power, source, rcv->power);
+          sim_log_debug(158U, "Gain,SNRLoss", "Going to lose packet from %i with signal %lf as am receiving a packet from %i with signal %lf\n", list->source, list->power, source, rcv->power);
           list->lost = 1;
         }
       list = list->next;
@@ -7034,7 +7146,7 @@ static inline void CpmModelC$sim_gain_put(int dest, message_t *msg, sim_time_t e
   int prevNode = sim_node();
 
 #line 430
-  sim_log_debug(155U, "CpmModelC", "Enqueing reception event for %i at %llu with power %lf.\n", dest, endTime, power);
+  sim_log_debug(159U, "CpmModelC", "Enqueing reception event for %i at %llu with power %lf.\n", dest, endTime, power);
   sim_set_node(dest);
   CpmModelC$enqueue_receive_event(prevNode, endTime, msg, receive, power, reversePower);
   sim_set_node(prevNode);
@@ -7050,7 +7162,7 @@ static inline void CpmModelC$Model$putOnAirTo(int dest, message_t *msg, bool ack
   CpmModelC$requestAck[sim_node()] = ack;
   CpmModelC$outgoing[sim_node()] = msg;
   CpmModelC$transmissionEndTime[sim_node()] = endTime;
-  sim_log_debug(156U, "CpmModelC", "Node %i transmitting to %i, finishes at %llu.\n", sim_node(), dest, endTime);
+  sim_log_debug(160U, "CpmModelC", "Node %i transmitting to %i, finishes at %llu.\n", sim_node(), dest, endTime);
 
   while (neighborEntry != (void *)0) {
       int other = neighborEntry->mote;
@@ -7063,7 +7175,7 @@ static inline void CpmModelC$Model$putOnAirTo(int dest, message_t *msg, bool ack
   list = CpmModelC$outstandingReceptionHead[sim_node()];
   while (list != (void *)0) {
       list->lost = 1;
-      sim_log_debug(157U, "CpmModelC,SNRLoss", "Lost packet from %i because %i has outstanding reception, startTime %llu endTime %llu\n", list->source, sim_node(), list->start, list->end);
+      sim_log_debug(161U, "CpmModelC,SNRLoss", "Lost packet from %i because %i has outstanding reception, startTime %llu endTime %llu\n", list->source, sim_node(), list->start, list->end);
       list = list->next;
     }
 }
@@ -7084,7 +7196,7 @@ static inline void TossimPacketModelC$send_transmit_done(sim_event_t *evt)
 #line 282
   TossimPacketModelC$sending[sim_node()] = (void *)0;
   TossimPacketModelC$transmitting[sim_node()] = FALSE;
-  sim_log_debug(131U, "TossimPacketModelC", "PACKET: Signaling send done at %llu.\n", sim_time());
+  sim_log_debug(135U, "TossimPacketModelC", "PACKET: Signaling send done at %llu.\n", sim_time());
   TossimPacketModelC$Packet$sendDone(rval, TossimPacketModelC$running[sim_node()] ? SUCCESS : EOFF);
 }
 
@@ -7107,13 +7219,13 @@ static inline void TossimPacketModelC$send_transmit(sim_event_t *evt)
   evt->time += duration;
   evt->handle = TossimPacketModelC$send_transmit_done;
 
-  sim_log_debug(129U, "TossimPacketModelC", "PACKET: Broadcasting packet to everyone.\n");
+  sim_log_debug(133U, "TossimPacketModelC", "PACKET: Broadcasting packet to everyone.\n");
   TossimPacketModelC$GainRadioModel$putOnAirTo(TossimPacketModelC$destNode[sim_node()], TossimPacketModelC$sending[sim_node()], __nesc_ntoh_uint8(metadata->ack.nxdata), evt->time, 0.0, 0.0);
   __nesc_hton_uint8(metadata->ack.nxdata, 0);
 
   evt->time += sim_csma_rxtx_delay() * (sim_ticks_per_sec() / sim_csma_symbols_per_sec());
 
-  sim_log_debug(130U, "TossimPacketModelC", "PACKET: Send done at %llu.\n", evt->time);
+  sim_log_debug(134U, "TossimPacketModelC", "PACKET: Send done at %llu.\n", evt->time);
 
   sim_queue_insert(evt);
 }
@@ -7123,7 +7235,7 @@ static inline void CpmModelC$Model$setPendingTransmission(void )
 #line 459
 {
   CpmModelC$transmitting[sim_node()] = TRUE;
-  sim_log_debug(158U, "CpmModelC", "setPendingTransmission: transmitting %i @ %s\n", CpmModelC$transmitting[sim_node()], sim_time_string());
+  sim_log_debug(162U, "CpmModelC", "setPendingTransmission: transmitting %i @ %s\n", CpmModelC$transmitting[sim_node()], sim_time_string());
 }
 
 # 57 "/usr/src/tinyos/tos/lib/tossim/GainRadioModel.nc"
@@ -7137,7 +7249,7 @@ inline static void TossimPacketModelC$GainRadioModel$setPendingTransmission(void
 static inline bool CpmModelC$Model$clearChannel(void )
 #line 211
 {
-  sim_log_debug(137U, "CpmModelC", "Checking clear channel @ %s: %f <= %f \n", sim_time_string(), (double )CpmModelC$packetNoise((void *)0), CpmModelC$clearThreshold[sim_node()]);
+  sim_log_debug(141U, "CpmModelC", "Checking clear channel @ %s: %f <= %f \n", sim_time_string(), (double )CpmModelC$packetNoise((void *)0), CpmModelC$clearThreshold[sim_node()]);
   return CpmModelC$packetNoise((void *)0) < CpmModelC$clearThreshold[sim_node()];
 }
 
@@ -7200,7 +7312,7 @@ static inline void TossimPacketModelC$send_backoff(sim_event_t *evt)
 
 #line 243
         TossimPacketModelC$sending[sim_node()] = (void *)0;
-        sim_log_debug(128U, "TossimPacketModelC", "PACKET: Failed to send packet due to busy channel.\n");
+        sim_log_debug(132U, "TossimPacketModelC", "PACKET: Failed to send packet due to busy channel.\n");
         TossimPacketModelC$Packet$sendDone(rval, EBUSY);
       }
     }
@@ -7221,7 +7333,7 @@ static inline void TossimPacketModelC$start_csma(void )
   backoff %= sim_csma_init_high() - sim_csma_init_low();
   backoff += sim_csma_init_low();
   backoff *= sim_ticks_per_sec() / sim_csma_symbols_per_sec();
-  sim_log_debug(127U, "TossimPacketModelC", "Starting CMSA with %lli.\n", backoff);
+  sim_log_debug(131U, "TossimPacketModelC", "Starting CMSA with %lli.\n", backoff);
   first_sample = sim_time() + backoff;
 
   TossimPacketModelC$sendEvent[sim_node()].mote = sim_node();
@@ -7239,11 +7351,11 @@ static inline error_t TossimPacketModelC$Packet$send(int dest, message_t *msg, u
 #line 161
 {
   if (!TossimPacketModelC$initialized[sim_node()]) {
-      sim_log_error(125U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not initialized!\n");
+      sim_log_error(129U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not initialized!\n");
       return EOFF;
     }
   if (!TossimPacketModelC$running[sim_node()]) {
-      sim_log_error(126U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not running!\n");
+      sim_log_error(130U, "TossimPacketModelC", "TossimPacketModelC: Send.send() called, but not running!\n");
       return EOFF;
     }
 
@@ -7330,7 +7442,7 @@ static inline double CpmModelC$prr_estimate_from_snr(double SNR)
   double prr_hat = pow(1 - PSE, 23 * 2);
 
 #line 239
-  sim_log_debug(138U, "CpmModelC,SNR", "SNR is %lf, PRR is %lf\n", SNR, prr_hat);
+  sim_log_debug(142U, "CpmModelC,SNR", "SNR is %lf, PRR is %lf\n", SNR, prr_hat);
   if (prr_hat > 1) {
     prr_hat = 1.1;
     }
@@ -7352,7 +7464,7 @@ static inline bool TossimActiveMessageC$Model$shouldAck(message_t *msg)
 
 #line 129
   if (__nesc_ntoh_uint16(header->dest.nxdata) == TossimActiveMessageC$amAddress()) {
-      sim_log_debug(118U, "Acks", "Received packet addressed to me so ack it\n");
+      sim_log_debug(122U, "Acks", "Received packet addressed to me so ack it\n");
       return TRUE;
     }
   return FALSE;
@@ -7384,7 +7496,7 @@ static inline void TossimPacketModelC$GainRadioModel$acked(message_t *msg)
       __nesc_hton_uint8(metadata->ack.nxdata, 1);
       if (msg != TossimPacketModelC$sending[sim_node()]) {
           TossimPacketModelC$error[sim_node()] = 1;
-          sim_log_debug(132U, "TossimPacketModelC", "Requested ack for 0x%x, but outgoing packet is 0x%x.\n", msg, TossimPacketModelC$sending[sim_node()]);
+          sim_log_debug(136U, "TossimPacketModelC", "Requested ack for 0x%x, but outgoing packet is 0x%x.\n", msg, TossimPacketModelC$sending[sim_node()]);
         }
     }
 }
@@ -7407,7 +7519,7 @@ static inline double CpmModelC$arr_estimate_from_snr(double SNR)
   double prr_hat = pow(1 - PSE, 23 * 2);
 
 #line 157
-  sim_log_debug(135U, "CpmModelC,SNRLoss", "SNR is %lf, ARR is %lf\n", SNR, prr_hat);
+  sim_log_debug(139U, "CpmModelC,SNRLoss", "SNR is %lf, ARR is %lf\n", SNR, prr_hat);
   if (prr_hat > 1) {
     prr_hat = 1.1;
     }
@@ -7506,7 +7618,7 @@ inline static Atm128_TIFR_t /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAs
 #line 53
 }
 #line 53
-# 116 "TemperatureMonitorC.nc"
+# 131 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$TimerGenerateNewThreshold$fired(void )
 {
 
@@ -7514,23 +7626,21 @@ static inline void TemperatureMonitorC$TimerGenerateNewThreshold$fired(void )
     {
       TemperatureMonitorC$threshold[sim_node()] = rand() % (200 - 150 + 1) + 150;
 
-      sim_log_debug(52U, "Temp", "New threshold value: %d \n", TemperatureMonitorC$threshold[sim_node()]);
+      sim_log_debug(53U, "Temp", "New threshold value: %d \n", TemperatureMonitorC$threshold[sim_node()]);
 
-      if (!TemperatureMonitorC$busy[sim_node()]) {
-        TemperatureMonitorC$sendSetupMessage$postTask();
-        }
+      TemperatureMonitorC$sendSetupMessage$postTask();
     }
 }
 
+
 static inline void TemperatureMonitorC$TimerMeasureTemperature$fired(void )
 {
-
 
   if (TOS_NODE_ID != 1) {
 
 
       TemperatureMonitorC$temperature[sim_node()] = rand() % (180 - 0 + 1) + 0;
-      sim_log_debug(53U, "Temp", "Temperature found : %u \n", TemperatureMonitorC$temperature[sim_node()]);
+      sim_log_debug(54U, "Temp", "Temperature found : %u \n", TemperatureMonitorC$temperature[sim_node()]);
       TemperatureMonitorC$sender[sim_node()] = TOS_NODE_ID;
       TemperatureMonitorC$temp[sim_node()] = TemperatureMonitorC$temperature[sim_node()];
       if (TemperatureMonitorC$temperature[sim_node()] >= TemperatureMonitorC$threshold[sim_node()]) {
@@ -7545,9 +7655,9 @@ static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$d
 }
 
 # 83 "/usr/src/tinyos/tos/lib/timer/Timer.nc"
-inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x7fb2e0eb1c28){
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x7f50e49eac28){
 #line 83
-  switch (arg_0x7fb2e0eb1c28) {
+  switch (arg_0x7f50e49eac28) {
 #line 83
     case 0U:
 #line 83
@@ -7563,7 +7673,7 @@ inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$f
 #line 83
     default:
 #line 83
-      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0x7fb2e0eb1c28);
+      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0x7f50e49eac28);
 #line 83
       break;
 #line 83
@@ -7637,7 +7747,7 @@ static inline void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm
 static inline void HplAtm128Timer0AsyncP$cancel_compare(void )
 #line 577
 {
-  sim_log_debug(185U, "HplAtm128CompareC", "Cancelling compare at 0x%p\n", HplAtm128Timer0AsyncP$compare[sim_node()]);
+  sim_log_debug(189U, "HplAtm128CompareC", "Cancelling compare at 0x%p\n", HplAtm128Timer0AsyncP$compare[sim_node()]);
   if (HplAtm128Timer0AsyncP$compare[sim_node()] != (void *)0) {
       HplAtm128Timer0AsyncP$compare[sim_node()]->cancelled = 1;
       HplAtm128Timer0AsyncP$compare[sim_node()]->cleanup = sim_queue_cleanup_total;
@@ -7666,7 +7776,7 @@ static inline void HplAtm128Timer0AsyncP$cancel_overflow(void )
 {
   if (HplAtm128Timer0AsyncP$overflow[sim_node()] != (void *)0) {
       HplAtm128Timer0AsyncP$overflow[sim_node()]->cancelled = 1;
-      sim_log_debug(184U, "HplAtm128Timer0AsyncP", "Cancelling overflow %p.\n", HplAtm128Timer0AsyncP$overflow[sim_node()]);
+      sim_log_debug(188U, "HplAtm128Timer0AsyncP", "Cancelling overflow %p.\n", HplAtm128Timer0AsyncP$overflow[sim_node()]);
       HplAtm128Timer0AsyncP$overflow[sim_node()]->cleanup = sim_queue_cleanup_total;
     }
 }
@@ -7681,11 +7791,11 @@ static inline void HplAtm128Timer0AsyncP$timer0_overflow_handle(sim_event_t *evt
   else {
       if ((atm128RegFile[sim_node()][ATM128_TIMSK] & (1 << TOIE0)) != 0) {
           atm128RegFile[sim_node()][ATM128_TIFR] &= ~(1 << TOV0);
-          sim_log_debug(181U, "HplAtm128Timer0AsyncP", "Overflow interrupt at %s\n", sim_time_string());
+          sim_log_debug(185U, "HplAtm128Timer0AsyncP", "Overflow interrupt at %s\n", sim_time_string());
           INTERRUPT_16();
         }
       else {
-          sim_log_debug(182U, "HplAtm128Timer0AsyncP", "Setting overflow bit at %s\n", sim_time_string());
+          sim_log_debug(186U, "HplAtm128Timer0AsyncP", "Setting overflow bit at %s\n", sim_time_string());
           atm128RegFile[sim_node()][ATM128_TIFR] |= 1 << TOV0;
         }
       HplAtm128Timer0AsyncP$configure_overflow(evt);
@@ -7735,7 +7845,7 @@ static inline void HplAtm128Timer0AsyncP$Timer0$set(uint8_t newVal)
   uint8_t curVal = HplAtm128Timer0AsyncP$Timer0$get();
 
 #line 299
-  sim_log_debug(174U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting timer: %hhu\n", newVal);
+  sim_log_debug(178U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting timer: %hhu\n", newVal);
   if (newVal == curVal) {
       return;
     }
@@ -7762,7 +7872,7 @@ static inline void HplAtm128Timer0AsyncP$Timer0$set(uint8_t newVal)
 static inline void HplAtm128Timer0AsyncP$timer0_compare_handle(sim_event_t *evt)
 #line 187
 {
-  sim_log_debug(164U, "HplAtm128Timer0AsyncP", "Beginning compare 0x%p at %s\n", evt, sim_time_string());
+  sim_log_debug(168U, "HplAtm128Timer0AsyncP", "Beginning compare 0x%p at %s\n", evt, sim_time_string());
   if (evt->cancelled) {
       return;
     }
@@ -7771,21 +7881,21 @@ static inline void HplAtm128Timer0AsyncP$timer0_compare_handle(sim_event_t *evt)
 
 #line 194
       sim_print_now(timeStr, 128);
-      sim_log_debug(165U, "HplAtm128Timer0AsyncP", "Handling compare at 0x%p @ %s\n", evt, sim_time_string());
+      sim_log_debug(169U, "HplAtm128Timer0AsyncP", "Handling compare at 0x%p @ %s\n", evt, sim_time_string());
 
       if ((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0 && !((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0)) {
-          sim_log_debug(166U, "HplAtm128Timer0AsyncP", "%s: CTC is set, clear timer.\n", __FUNCTION__);
+          sim_log_debug(170U, "HplAtm128Timer0AsyncP", "%s: CTC is set, clear timer.\n", __FUNCTION__);
           HplAtm128Timer0AsyncP$Timer0$set(0);
         }
       else {
-          sim_log_debug(167U, "HplAtm128Timer0AsyncP", "%s: TCCR is 0x%hhx, %i, %i\n", __FUNCTION__, * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33], (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0), (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0));
+          sim_log_debug(171U, "HplAtm128Timer0AsyncP", "%s: TCCR is 0x%hhx, %i, %i\n", __FUNCTION__, * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33], (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0), (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0));
         }
 
       if ((atm128RegFile[sim_node()][ATM128_TIMSK] & (1 << OCIE0)) != 0) {
-          sim_log_debug(168U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
+          sim_log_debug(172U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
           atm128RegFile[sim_node()][ATM128_TIFR] &= ~(1 << OCF0);
-          sim_log_debug(169U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
-          sim_log_debug(170U, "HplAtm128Timer0AsyncP", "Compare interrupt @ %s\n", timeStr);
+          sim_log_debug(173U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
+          sim_log_debug(174U, "HplAtm128Timer0AsyncP", "Compare interrupt @ %s\n", timeStr);
           INTERRUPT_15();
         }
       else {
@@ -7805,7 +7915,7 @@ static inline sim_event_t *HplAtm128Timer0AsyncP$allocate_compare(void )
   sim_event_t *newEvent = sim_queue_allocate_event();
 
 #line 225
-  sim_log_debug(171U, "HplAtm128Timer0AsyncP", "Allocated compare at 0x%p\n", newEvent);
+  sim_log_debug(175U, "HplAtm128Timer0AsyncP", "Allocated compare at 0x%p\n", newEvent);
   newEvent->handle = HplAtm128Timer0AsyncP$timer0_compare_handle;
   newEvent->cleanup = sim_queue_cleanup_none;
   return newEvent;
@@ -8012,7 +8122,7 @@ uint8_t len)
   if (/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg != (void *)0) {
       return EBUSY;
     }
-  sim_log_debug(186U, "AMQueue", "AMQueue: request to send from %hhu (%p): passed checks\n", clientId, msg);
+  sim_log_debug(190U, "AMQueue", "AMQueue: request to send from %hhu (%p): passed checks\n", clientId, msg);
 
   /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg = msg;
   /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(msg, len);
@@ -8022,12 +8132,12 @@ uint8_t len)
       am_id_t amId = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(msg);
       am_addr_t dest = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(msg);
 
-      sim_log_debug(187U, "AMQueue", "%s: request to send from %hhu (%p): queue empty\n", __FUNCTION__, clientId, msg);
+      sim_log_debug(191U, "AMQueue", "%s: request to send from %hhu (%p): queue empty\n", __FUNCTION__, clientId, msg);
       /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()] = clientId;
 
       err = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(amId, dest, msg, len);
       if (err != SUCCESS) {
-          sim_log_debug(188U, "AMQueue", "%s: underlying send failed.\n", __FUNCTION__);
+          sim_log_debug(192U, "AMQueue", "%s: underlying send failed.\n", __FUNCTION__);
           /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()] = 1;
           /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg = (void *)0;
         }
@@ -8035,7 +8145,7 @@ uint8_t len)
       return err;
     }
   else {
-      sim_log_debug(189U, "AMQueue", "AMQueue: request to send from %hhu (%p): queue not empty\n", clientId, msg);
+      sim_log_debug(193U, "AMQueue", "AMQueue: request to send from %hhu (%p): queue not empty\n", clientId, msg);
     }
   return SUCCESS;
 }
@@ -8215,7 +8325,7 @@ inline static bool SimMainP$Scheduler$runNextTask(void ){
 static inline error_t TossimPacketModelC$Init$init(void )
 #line 86
 {
-  sim_log_debug(120U, "TossimPacketModelC", "TossimPacketModelC: Init.init() called\n");
+  sim_log_debug(124U, "TossimPacketModelC", "TossimPacketModelC: Init.init() called\n");
   TossimPacketModelC$initialized[sim_node()] = TRUE;
 
 
@@ -8243,7 +8353,7 @@ inline static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm
 static inline void HplAtm128Timer0AsyncP$Timer0Ctrl$setControl(Atm128TimerControl_t x)
 #line 364
 {
-  sim_log_debug(176U, "HplAtm128Timer0AsyncP", "Setting control to be 0x%hhx\n", x.flat);
+  sim_log_debug(180U, "HplAtm128Timer0AsyncP", "Setting control to be 0x%hhx\n", x.flat);
   * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33] = x.flat;
 }
 
@@ -8305,17 +8415,17 @@ inline static error_t SimMainP$SoftwareInit$init(void ){
 #line 62
 }
 #line 62
-# 90 "TemperatureMonitorC.nc"
+# 104 "TemperatureMonitorC.nc"
 static inline void TemperatureMonitorC$Boot$booted(void )
-#line 90
+#line 104
 {
 
   TemperatureMonitorC$temperature[sim_node()] = 0;
-  TemperatureMonitorC$busy[sim_node()] = FALSE;
+
   if (TOS_NODE_ID == 1) {
     TemperatureMonitorC$sender[sim_node()] = 1;
     }
-#line 96
+#line 110
   TemperatureMonitorC$AMControl$start();
 }
 
@@ -8369,7 +8479,7 @@ static inline void SimMoteP$sim_mote_boot_handle(sim_event_t *e)
   sim_print_now(buf, 128);
 
   SimMoteP$bootEvent[sim_node()] = (sim_event_t *)(void *)0;
-  sim_log_debug(114U, "SimMoteP", "Turning on mote %i at time %s.\n", (int )sim_node(), buf);
+  sim_log_debug(118U, "SimMoteP", "Turning on mote %i at time %s.\n", (int )sim_node(), buf);
   SimMoteP$SimMote$turnOn();
 }
 
@@ -9828,11 +9938,11 @@ static void TossimActiveMessageC$Model$receive(message_t *msg)
   payload = TossimActiveMessageC$Packet$getPayload(TossimActiveMessageC$bufferPointer[sim_node()], TossimActiveMessageC$Packet$maxPayloadLength());
 
   if (TossimActiveMessageC$AMPacket$isForMe(msg)) {
-      sim_log_debug(116U, "AM", "Received active message (%p) of type %hhu and length %hhu for me @ %s.\n", TossimActiveMessageC$bufferPointer[sim_node()], TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), len, sim_time_string());
+      sim_log_debug(120U, "AM", "Received active message (%p) of type %hhu and length %hhu for me @ %s.\n", TossimActiveMessageC$bufferPointer[sim_node()], TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), len, sim_time_string());
       TossimActiveMessageC$bufferPointer[sim_node()] = TossimActiveMessageC$Receive$receive(TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), TossimActiveMessageC$bufferPointer[sim_node()], payload, len);
     }
   else {
-      sim_log_debug(117U, "AM", "Snooped on active message of type %hhu and length %hhu for %hu @ %s.\n", TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), len, TossimActiveMessageC$AMPacket$destination(TossimActiveMessageC$bufferPointer[sim_node()]), sim_time_string());
+      sim_log_debug(121U, "AM", "Snooped on active message of type %hhu and length %hhu for %hu @ %s.\n", TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), len, TossimActiveMessageC$AMPacket$destination(TossimActiveMessageC$bufferPointer[sim_node()]), sim_time_string());
       TossimActiveMessageC$bufferPointer[sim_node()] = TossimActiveMessageC$Snoop$receive(TossimActiveMessageC$AMPacket$type(TossimActiveMessageC$bufferPointer[sim_node()]), TossimActiveMessageC$bufferPointer[sim_node()], payload, len);
     }
 }
@@ -9882,11 +9992,11 @@ static error_t SimSchedulerBasicP$TaskBasic$postTask(uint8_t id)
 #line 210
     __nesc_atomic_end(__nesc_atomic); }
   if (result == SUCCESS) {
-      sim_log_debug(109U, "Scheduler", "Posting task %hhu.\n", id);
+      sim_log_debug(113U, "Scheduler", "Posting task %hhu.\n", id);
       SimSchedulerBasicP$sim_scheduler_submit_event();
     }
   else {
-      sim_log_debug(110U, "Scheduler", "Posting task %hhu, but already posted.\n", id);
+      sim_log_debug(114U, "Scheduler", "Posting task %hhu, but already posted.\n", id);
     }
   return result;
 }
@@ -9961,7 +10071,7 @@ static void SimSchedulerBasicP$sim_scheduler_submit_event(void )
   __nesc_enable_interrupt();
 
   sim_print_now(timeBuf, 128);
-  sim_log_debug(105U, "SimMainP", "Mote %li signaling boot at time %s.\n", sim_node(), timeBuf);
+  sim_log_debug(109U, "SimMainP", "Mote %li signaling boot at time %s.\n", sim_node(), timeBuf);
   SimMainP$Boot$booted();
 
 
@@ -9982,7 +10092,7 @@ static bool SimSchedulerBasicP$Scheduler$runNextTask(void )
       nextTask = SimSchedulerBasicP$popTask();
       if (nextTask == SimSchedulerBasicP$NO_TASK) 
         {
-          sim_log_debug(107U, "Scheduler", "Told to run next task, but no task to run.\n");
+          sim_log_debug(111U, "Scheduler", "Told to run next task, but no task to run.\n");
           {
             unsigned char __nesc_temp = 
 #line 189
@@ -10000,7 +10110,7 @@ static bool SimSchedulerBasicP$Scheduler$runNextTask(void )
 #line 193
     __nesc_atomic_end(__nesc_atomic); }
 #line 192
-  sim_log_debug(108U, "Scheduler", "Running task %hhu.\n", nextTask);
+  sim_log_debug(112U, "Scheduler", "Running task %hhu.\n", nextTask);
   SimSchedulerBasicP$TaskBasic$runTask(nextTask);
   return TRUE;
 }
@@ -10024,7 +10134,7 @@ uint8_t len)
   tossim_header_t *header = TossimActiveMessageC$getHeader(amsg);
 
 #line 78
-  sim_log_debug(115U, "AM", "AM: Sending packet (id=%hhu, len=%hhu) to %hu\n", id, len, addr);
+  sim_log_debug(119U, "AM", "AM: Sending packet (id=%hhu, len=%hhu) to %hu\n", id, len, addr);
   __nesc_hton_uint8(header->type.nxdata, id);
   __nesc_hton_uint16(header->dest.nxdata, addr);
   __nesc_hton_uint16(header->src.nxdata, TossimActiveMessageC$AMPacket$address());
@@ -10062,14 +10172,14 @@ static double CpmModelC$noise_hash_generation(void )
   double noise_val;
   uint16_t node_id = sim_node();
 
-  sim_log_debug(133U, "CpmModelC", "IN: noise_hash_generation()\n");
+  sim_log_debug(137U, "CpmModelC", "IN: noise_hash_generation()\n");
   if (5 <= remain && remain < 10) {
       noise_val = (double )sim_noise_generate(node_id, quotient + 1);
     }
   else {
       noise_val = (double )sim_noise_generate(node_id, quotient);
     }
-  sim_log_debug(134U, "CpmModelC,Tal", "%s: OUT: noise_hash_generation(): %lf\n", sim_time_string(), noise_val);
+  sim_log_debug(138U, "CpmModelC,Tal", "%s: OUT: noise_hash_generation(): %lf\n", sim_time_string(), noise_val);
 
   return noise_val;
 }
@@ -10090,7 +10200,7 @@ static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, 
       /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()], msg, err);
     }
   else {
-      sim_log_debug(190U, "PointerBug", "%s received send done for %p, signaling for %p.\n", __FUNCTION__, msg, /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()]].msg);
+      sim_log_debug(194U, "PointerBug", "%s received send done for %p, signaling for %p.\n", __FUNCTION__, msg, /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()]].msg);
     }
 }
 
@@ -10183,7 +10293,7 @@ static uint8_t HplAtm128Timer0AsyncP$Timer0$get(void )
   elapsed = HplAtm128Timer0AsyncP$sim_to_clock(elapsed);
   elapsed = elapsed >> HplAtm128Timer0AsyncP$shiftFromScale();
   rval = (uint8_t )(elapsed & 0xff);
-  sim_log_debug(173U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting timer: %hhu\n", rval);
+  sim_log_debug(177U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting timer: %hhu\n", rval);
   return rval;
 }
 
@@ -10262,7 +10372,7 @@ static Atm128_TIFR_t HplAtm128Timer0AsyncP$Timer0Ctrl$getInterruptFlag(void )
 static uint8_t HplAtm128Timer0AsyncP$Compare$get(void )
 #line 457
 {
-  sim_log_debug(179U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting compare: %hhu\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31]);
+  sim_log_debug(183U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting compare: %hhu\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31]);
   return * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31];
 }
 
@@ -10327,13 +10437,13 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
       uint8_t tifr = (uint8_t )/*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$TimerCtrl$getInterruptFlag().flat;
 
 #line 101
-      sim_log_debug(159U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: TIFR is %hhx\n", tifr);
+      sim_log_debug(163U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: TIFR is %hhx\n", tifr);
       if ((interrupt_in != 0 && interrupt_in < /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MINDT) || tifr & (1 << OCF0)) {
           if (interrupt_in < /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MINDT) {
-              sim_log_debug(160U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: under min: %hhu.\n", interrupt_in);
+              sim_log_debug(164U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: under min: %hhu.\n", interrupt_in);
             }
           else {
-              sim_log_debug(161U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: OCF set.\n");
+              sim_log_debug(165U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: OCF set.\n");
             }
           {
 #line 109
@@ -10345,14 +10455,14 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
 
       if (!/*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$set[sim_node()]) {
           newOcr0 = /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MAXT;
-          sim_log_debug(162U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: no alarm set, set at max.\n");
+          sim_log_debug(166U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: no alarm set, set at max.\n");
         }
       else 
         {
           uint32_t now = /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$Counter$get();
 
 #line 120
-          sim_log_debug(163U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: now-t0 = %llu, dt = %llu\n", now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()], /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]);
+          sim_log_debug(167U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: now-t0 = %llu, dt = %llu\n", now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()], /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]);
 
           if ((uint32_t )(now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()]) >= /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]) 
             {
@@ -10396,7 +10506,7 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
 static void HplAtm128Timer0AsyncP$Compare$set(uint8_t t)
 #line 463
 {
-  sim_log_debug(180U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting compare: %hhu\n", t);
+  sim_log_debug(184U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting compare: %hhu\n", t);
   /* atomic removed: atomic calls only */
 #line 465
   {
@@ -10477,7 +10587,7 @@ static void HplAtm128Timer0AsyncP$configure_overflow(sim_event_t *evt)
   overflowTime += sim_time();
   overflowTime -= (sim_time() - HplAtm128Timer0AsyncP$last_zero()) % (1 << HplAtm128Timer0AsyncP$shiftFromScale());
 
-  sim_log_debug(183U, "HplAtm128Timer0AsyncP", "Scheduling new overflow for %i at time %llu\n", sim_node(), overflowTime);
+  sim_log_debug(187U, "HplAtm128Timer0AsyncP", "Scheduling new overflow for %i at time %llu\n", sim_node(), overflowTime);
 
   evt->time = overflowTime;
 }
@@ -10524,7 +10634,7 @@ static void HplAtm128Timer0AsyncP$configure_compare(sim_event_t *evt)
   phaseOffset %= HplAtm128Timer0AsyncP$clock_to_sim(1 << HplAtm128Timer0AsyncP$shiftFromScale());
   compareTime -= phaseOffset;
 
-  sim_log_debug(172U, "HplAtm128Timer0AsyncP", "Configuring new compare of %i for %i at time %llu  (@ %llu)\n", (int )compareVal, sim_node(), compareTime, sim_time());
+  sim_log_debug(176U, "HplAtm128Timer0AsyncP", "Configuring new compare of %i for %i at time %llu  (@ %llu)\n", (int )compareVal, sim_node(), compareTime, sim_time());
 
   evt->time = compareTime;
 }
@@ -10540,10 +10650,10 @@ static error_t TossimPacketModelC$Control$start(void )
 #line 106
 {
   if (!TossimPacketModelC$initialized[sim_node()]) {
-      sim_log_error(121U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called before initialization!\n");
+      sim_log_error(125U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called before initialization!\n");
       return FAIL;
     }
-  sim_log_debug(122U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called.\n");
+  sim_log_debug(126U, "TossimPacketModelC", "TossimPacketModelC: Control.start() called.\n");
   TossimPacketModelC$startDoneTask$postTask();
   return SUCCESS;
 }
@@ -10602,7 +10712,7 @@ uint8_t len)
 #line 118
   sim_set_node(mote);
   result = SimMoteP$SimMote$getVariableInfo(name, ptr, len);
-  sim_log_debug(112U, "SimMoteP", "Fetched %s of %i to be %p with len %i (result %i)\n", name, mote, *ptr, *len, result);
+  sim_log_debug(116U, "SimMoteP", "Fetched %s of %i to be %p with len %i (result %i)\n", name, mote, *ptr, *len, result);
   sim_set_node(tmpID);
   return result;
 }
@@ -10615,7 +10725,7 @@ uint8_t len)
 #line 127
   sim_set_node(mote);
   SimMoteP$startTime[sim_node()] = t;
-  sim_log_debug(113U, "SimMoteP", "Setting start time to %llu\n", SimMoteP$startTime[sim_node()]);
+  sim_log_debug(117U, "SimMoteP", "Setting start time to %llu\n", SimMoteP$startTime[sim_node()]);
   sim_set_node(tmpID);
   return;
 }
@@ -10650,7 +10760,7 @@ static void SimMoteP$SimMote$turnOn(void )
         }
       __nesc_nido_initialise(sim_node());
       SimMoteP$startTime[sim_node()] = sim_time();
-      sim_log_debug(111U, "SimMoteP", "Setting start time to %llu\n", SimMoteP$startTime[sim_node()]);
+      sim_log_debug(115U, "SimMoteP", "Setting start time to %llu\n", SimMoteP$startTime[sim_node()]);
       SimMoteP$isOn[sim_node()] = TRUE;
       sim_main_start_mote();
     }
@@ -10733,16 +10843,22 @@ static int __nesc_nido_resolve(int __nesc_mote,
     *size = sizeof(TemperatureMonitorC$routeBackNode[__nesc_mote]);
     return 0;
   }
-  if (!strcmp(varname, "TemperatureMonitorC$pkt"))
+  if (!strcmp(varname, "TemperatureMonitorC$packets"))
   {
-    *addr = (uintptr_t)&TemperatureMonitorC$pkt[__nesc_mote];
-    *size = sizeof(TemperatureMonitorC$pkt[__nesc_mote]);
+    *addr = (uintptr_t)&TemperatureMonitorC$packets[__nesc_mote];
+    *size = sizeof(TemperatureMonitorC$packets[__nesc_mote]);
     return 0;
   }
-  if (!strcmp(varname, "TemperatureMonitorC$busy"))
+  if (!strcmp(varname, "TemperatureMonitorC$start"))
   {
-    *addr = (uintptr_t)&TemperatureMonitorC$busy[__nesc_mote];
-    *size = sizeof(TemperatureMonitorC$busy[__nesc_mote]);
+    *addr = (uintptr_t)&TemperatureMonitorC$start[__nesc_mote];
+    *size = sizeof(TemperatureMonitorC$start[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "TemperatureMonitorC$end"))
+  {
+    *addr = (uintptr_t)&TemperatureMonitorC$end[__nesc_mote];
+    *size = sizeof(TemperatureMonitorC$end[__nesc_mote]);
     return 0;
   }
   if (!strcmp(varname, "TemperatureMonitorC$sender"))
@@ -11196,8 +11312,9 @@ static void __nesc_nido_initialise(int __nesc_mote)
   memset((void *)&TemperatureMonitorC$temperature[__nesc_mote], 0, sizeof TemperatureMonitorC$temperature[__nesc_mote]);
   memset((void *)&TemperatureMonitorC$threshold[__nesc_mote], 0, sizeof TemperatureMonitorC$threshold[__nesc_mote]);
   TemperatureMonitorC$routeBackNode[__nesc_mote] = 1;
-  memset((void *)&TemperatureMonitorC$pkt[__nesc_mote], 0, sizeof TemperatureMonitorC$pkt[__nesc_mote]);
-  memset((void *)&TemperatureMonitorC$busy[__nesc_mote], 0, sizeof TemperatureMonitorC$busy[__nesc_mote]);
+  memset((void *)&TemperatureMonitorC$packets[__nesc_mote], 0, sizeof TemperatureMonitorC$packets[__nesc_mote]);
+  TemperatureMonitorC$start[__nesc_mote] = 0;
+  TemperatureMonitorC$end[__nesc_mote] = 0;
   memset((void *)&TemperatureMonitorC$sender[__nesc_mote], 0, sizeof TemperatureMonitorC$sender[__nesc_mote]);
   memset((void *)&TemperatureMonitorC$temp[__nesc_mote], 0, sizeof TemperatureMonitorC$temp[__nesc_mote]);
 
