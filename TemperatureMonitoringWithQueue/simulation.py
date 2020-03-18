@@ -24,7 +24,7 @@ t.addChannel("Temp", sys.stdout)
 t.addChannel("Failures", sys.stdout)
 
 #Add noise model from file
-noise = open("meyer-heavy.txt", "r")
+noise = open("noise.txt", "r")
 for line in noise:
   str1 = line.strip()
   if str1:
