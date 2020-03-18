@@ -14,7 +14,6 @@
 
 #define QUEUE_LENGTH 10
 
-
 /* DATA message : message sent by the node "node_id" to the sink node
  * containing the temperature "temperature" measured by the node "sender"
  */
@@ -38,3 +37,4 @@ typedef nx_struct SETUPmsg
 } SETUPmsg;
 
 #endif
+

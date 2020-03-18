@@ -20,6 +20,8 @@ for line in f:
     r.add(int(s[0]), int(s[1]), float(s[2]))
 
 t.addChannel("Temp", sys.stdout)
+#t.addChannel("Boot", sys.stdout)
+t.addChannel("Failures", sys.stdout)
 
 #Add noise model from file
 noise = open("meyer-heavy.txt", "r")
