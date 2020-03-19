@@ -30,9 +30,10 @@ typedef nx_struct DATAmsg
  */
 typedef nx_struct SETUPmsg
 {
+	nx_uint16_t progressiveNum;
 	nx_uint16_t node_id;
 	nx_uint16_t threshold;
-	nx_uint8_t father;
+	nx_uint16_t father;
 
 } SETUPmsg;
 

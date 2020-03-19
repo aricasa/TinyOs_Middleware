@@ -8,11 +8,13 @@ print "*************************************************************************
 from TOSSIM import *
 import sys
 
+nunNodes=14
+
 t = Tossim([])
 r = t.radio()
 
 #Add routes between nodes from file
-f = open("topology.txt", "r")
+f = open("topology4.txt", "r")
 for line in f:
   s = line.split()
   if s:
@@ -29,28 +31,16 @@ for line in noise:
   str1 = line.strip()
   if str1:
     val = int(str1)
-    for i in range(1, 15):
+    for i in range(1, nunNodes+1):
       t.getNode(i).addNoiseTraceReading(val)
 
-for i in range(1, 15):
+for i in range(1, nunNodes+1):
   print "Creating noise model for ",i;
   t.getNode(i).createNoiseModel()
 
 #Add nodes
-t.getNode(1).bootAtTime(100001);
-t.getNode(2).bootAtTime(800008);
-t.getNode(3).bootAtTime(1800009);
-t.getNode(4).bootAtTime(2500009);
-t.getNode(5).bootAtTime(3000009);
-t.getNode(6).bootAtTime(3000009);
-t.getNode(7).bootAtTime(3000009);
-t.getNode(8).bootAtTime(3000009);
-t.getNode(9).bootAtTime(3000009);
-t.getNode(10).bootAtTime(3000009);
-t.getNode(11).bootAtTime(3000009);
-t.getNode(12).bootAtTime(3000009);
-t.getNode(13).bootAtTime(3000009);
-t.getNode(14).bootAtTime(3000009);
+for i in range(1, nunNodes+1):
+  t.getNode(i).bootAtTime(100001 + i*100000);
 
 t.runNextEvent();
 time = t.time()

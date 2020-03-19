@@ -31,8 +31,10 @@ implementation
   //Prototypes
   task void uartSendTask();
   static void startTimer();
-  void sendSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint8_t father);
+  void sendSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint16_t father, uint16_t progNum);
+  void sendLaterSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint16_t father, uint16_t progNum);
   void sendDATAMessage(uint16_t node_id , uint16_t temperatureMsg, uint16_t senderMsg);
+  void sendLaterDATAMessage(uint16_t node_id , uint16_t temperatureMsg, uint16_t senderMsg);
   void manageReceivedSETUPMessage(message_t* msg, void *payload);
   void manageReceivedDATAMessage(message_t* msg, void *payload);
 
@@ -50,6 +52,9 @@ implementation
   
   /* Threshold value of temperature*/
   uint16_t threshold;
+  
+  /* Progressie number of the last SETUP message received */
+  uint16_t progressiveNum;
   
 
   /* On bootup, initialize radio communications, and some state variables. */
@@ -87,10 +92,10 @@ implementation
     if(TOS_NODE_ID==1)
     {
 	    threshold = (rand() % (MAX_TEMPERATURE_threshold - MIN_TEMPERATURE_threshold + 1)) + MIN_TEMPERATURE_threshold; 
-	 
+	 	progressiveNum++;
 	    dbg("Temp", "New threshold value: %d \n", threshold);
 	    	
-	    sendSETUPMessage(TOS_NODE_ID,threshold,routeBackNode);
+	    sendSETUPMessage(TOS_NODE_ID,threshold,routeBackNode,progressiveNum);
     }
   }
 	
@@ -102,8 +107,6 @@ implementation
   		/* comment if you want that the temperature is randomly generated */
   		temperature = (rand() % (MAX_TEMPERATURE_sensor - MIN_TEMPERATURE_sensor + 1)) + MIN_TEMPERATURE_sensor;
   		dbg("Temp", "Temperature measured : %d \n", temperature);
-  		sender=TOS_NODE_ID;
-  		temp=temperature;
   		if(temperature >= threshold)
       		sendDATAMessage(TOS_NODE_ID,temperature,TOS_NODE_ID);
       	
@@ -124,7 +127,7 @@ implementation
   
   /* The sink node sends a SETUP message in broadcast to all other nodes informing them
    * about the new threshold */
-  void sendSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint8_t father)
+  void sendSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint16_t father, uint16_t progNum)
   {
   	SETUPmsg* msg;
 	msg = (SETUPmsg*) (call Packet.getPayload(&sendBuffer, sizeof(SETUPmsg)));
@@ -136,6 +139,7 @@ implementation
 		msg->node_id = node_id;
 		msg->threshold = thresholdNew;
 		msg->father = father;
+		msg->progressiveNum = progNum;
 		        
 		dbg("Temp", "Sending SETUP msg: threshold = %d \n", msg->threshold);
 		    
@@ -151,12 +155,12 @@ implementation
   	else
   	{
   		dbg("Temp", "Busy -> put in queue SETUP msg: threshold = %d \n", msg->threshold);
-  		sendLaterSETUPMessage(node_id ,thresholdNew , father);
+  		sendLaterSETUPMessage(node_id ,thresholdNew , father, progressiveNum);
   	}
   }
   
   /* Enqueue a SETUP message when a message is already in sending */
-  void sendLaterSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint8_t father)
+  void sendLaterSETUPMessage(uint16_t node_id , uint16_t thresholdNew , uint16_t father, uint16_t progNum)
   {
   	SETUPmsg* msg;
 	message_t *newmsg = call UARTMessagePool.get();
@@ -174,6 +178,7 @@ implementation
 	msg->node_id = node_id;
 	msg->threshold = thresholdNew;
 	msg->father = father;
+	msg->progressiveNum = progNum;
 
 	if (call UARTQueue.enqueue(newmsg) != SUCCESS || call packetsLengthQueue.enqueue(sizeof(SETUPmsg)) != SUCCESS) 
 	{
@@ -332,12 +337,13 @@ implementation
   {
 	SETUPmsg* in = (SETUPmsg*)payload; 		
 		
-	if(TOS_NODE_ID!=1 && TOS_NODE_ID!=in->father)
+	if(TOS_NODE_ID!=1 && TOS_NODE_ID!=in->father && in->progressiveNum > progressiveNum)
     {
     	dbg("Temp" , "Received SETUP msg : from node %d with threshold %d \n", in->node_id ,  in->threshold);
 	   	threshold = in->threshold;
-	   	routeBackNode =	in->node_id;   
-	   	sendSETUPMessage(TOS_NODE_ID,in->threshold,in->node_id);	    			    	
+	   	routeBackNode =	in->node_id;
+	   	progressiveNum = in->progressiveNum;   
+	   	sendSETUPMessage(TOS_NODE_ID,in->threshold,in->node_id,in->progressiveNum);	    			    	
 	 }
    }
 
