@@ -67,6 +67,7 @@ implementation
     //Initialize variables  
     routeBackNode=1;
     sendBusy=FALSE;
+    progressiveNum=65533;
     
     //Start the timers
     startTimer();
@@ -337,7 +338,7 @@ implementation
   {
 	SETUPmsg* in = (SETUPmsg*)payload; 		
 		
-	if(TOS_NODE_ID!=1 && TOS_NODE_ID!=in->father && in->progressiveNum > progressiveNum)
+	if(TOS_NODE_ID!=1 && TOS_NODE_ID!=in->father && (in->progressiveNum > progressiveNum || (in->progressiveNum==0 && progressiveNum!=0) ))
     {
     	dbg("Temp" , "Received SETUP msg : from node %d with threshold %d \n", in->node_id ,  in->threshold);
 	   	threshold = in->threshold;

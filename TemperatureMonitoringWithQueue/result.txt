@@ -85,10 +85,10 @@ DEBUG (13): Temperature measured : 157
 DEBUG (13): Sending DATA msg: sender 13 , measured value 157 
 DEBUG (14): Temperature measured : 147 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 147 
-DEBUG (1): Received DATA msg : from node 4 the measured value 57 of node 4 
+DEBUG (1): Received DATA msg : from node 3 the measured value 30 of node 3 
 DEBUG (1): Received DATA msg : from node 2 the measured value 114 of node 2 
 DEBUG (1): Received DATA msg : from node 5 the measured value 23 of node 5 
-DEBUG (1): Received DATA msg : from node 3 the measured value 30 of node 3 
+DEBUG (1): Received DATA msg : from node 4 the measured value 57 of node 4 
 DEBUG (2): Temperature measured : 8 
 DEBUG (2): Sending DATA msg: sender 2 , measured value 8 
 DEBUG (3): Temperature measured : 126 
@@ -115,7 +115,7 @@ DEBUG (13): Temperature measured : 176
 DEBUG (13): Sending DATA msg: sender 13 , measured value 176 
 DEBUG (14): Temperature measured : 5 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 5 
-DEBUG (1): Received DATA msg : from node 2 the measured value 8 of node 2 
+DEBUG (1): Received DATA msg : from node 4 the measured value 124 of node 4 
 DEBUG (1): Received DATA msg : from node 5 the measured value 167 of node 5 
 DEBUG (1): New threshold value: 158 
 DEBUG (1): Sending SETUP msg: threshold = 158 
@@ -127,22 +127,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 158
 DEBUG (3): Sending SETUP msg: threshold = 158 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 158 
 DEBUG (2): Sending SETUP msg: threshold = 158 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 158 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 158 
 DEBUG (10): Sending SETUP msg: threshold = 158 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
-DEBUG (9): Sending SETUP msg: threshold = 158 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 158 
 DEBUG (6): Sending SETUP msg: threshold = 158 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 158 
-DEBUG (11): Sending SETUP msg: threshold = 158 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 158 
-DEBUG (7): Sending SETUP msg: threshold = 158 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 158 
 DEBUG (13): Sending SETUP msg: threshold = 158 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 158 
-DEBUG (8): Sending SETUP msg: threshold = 158 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 158 
+DEBUG (11): Sending SETUP msg: threshold = 158 
 DEBUG (12): Received SETUP msg : from node 13 with threshold 158 
 DEBUG (12): Sending SETUP msg: threshold = 158 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 158 
+DEBUG (7): Sending SETUP msg: threshold = 158 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 158 
+DEBUG (8): Sending SETUP msg: threshold = 158 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
+DEBUG (9): Sending SETUP msg: threshold = 158 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 158 
 DEBUG (14): Sending SETUP msg: threshold = 158 
 DEBUG (2): Temperature measured : 96 
@@ -174,18 +174,16 @@ DEBUG (13): Temperature measured : 173
 DEBUG (13): Sending DATA msg: sender 13 , measured value 173 
 DEBUG (14): Temperature measured : 161 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 161 
+DEBUG (8): Received DATA msg : from node 14 the measured value 161 of node 14 
+DEBUG (8): Sending DATA msg: sender 14 , measured value 161 
 DEBUG (10): Received DATA msg : from node 13 the measured value 173 of node 13 
 DEBUG (10): Sending DATA msg: sender 13 , measured value 173 
 DEBUG (3): Received DATA msg : from node 7 the measured value 158 of node 7 
 DEBUG (3): Sending DATA msg: sender 7 , measured value 158 
-DEBUG (8): Received DATA msg : from node 14 the measured value 161 of node 14 
-DEBUG (8): Sending DATA msg: sender 14 , measured value 161 
-DEBUG (5): Received DATA msg : from node 10 the measured value 173 of node 13 
-DEBUG (5): Sending DATA msg: sender 13 , measured value 173 
 DEBUG (4): Received DATA msg : from node 8 the measured value 161 of node 14 
 DEBUG (4): Sending DATA msg: sender 14 , measured value 161 
-DEBUG (1): Received DATA msg : from node 3 the measured value 158 of node 7 
-DEBUG (1): Received DATA msg : from node 5 the measured value 173 of node 13 
+DEBUG (2): Received DATA msg : from node 10 the measured value 173 of node 13 
+DEBUG (2): Sending DATA msg: sender 13 , measured value 173 
 DEBUG (1): Received DATA msg : from node 4 the measured value 161 of node 14 
 DEBUG (1): New threshold value: 188 
 DEBUG (1): Sending SETUP msg: threshold = 188 
@@ -197,21 +195,21 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 188
 DEBUG (3): Sending SETUP msg: threshold = 188 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 188 
 DEBUG (2): Sending SETUP msg: threshold = 188 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 188 
+DEBUG (10): Sending SETUP msg: threshold = 188 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 188 
+DEBUG (9): Sending SETUP msg: threshold = 188 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 188 
 DEBUG (11): Sending SETUP msg: threshold = 188 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 188 
 DEBUG (7): Sending SETUP msg: threshold = 188 
 DEBUG (6): Received SETUP msg : from node 3 with threshold 188 
 DEBUG (6): Sending SETUP msg: threshold = 188 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 188 
-DEBUG (10): Sending SETUP msg: threshold = 188 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 188 
-DEBUG (9): Sending SETUP msg: threshold = 188 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 188 
 DEBUG (13): Sending SETUP msg: threshold = 188 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 188 
 DEBUG (8): Sending SETUP msg: threshold = 188 
-DEBUG (12): Received SETUP msg : from node 13 with threshold 188 
+DEBUG (12): Received SETUP msg : from node 7 with threshold 188 
 DEBUG (12): Sending SETUP msg: threshold = 188 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 188 
 DEBUG (14): Sending SETUP msg: threshold = 188 
@@ -251,20 +249,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 199
 DEBUG (3): Sending SETUP msg: threshold = 199 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 199 
 DEBUG (2): Sending SETUP msg: threshold = 199 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 199 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 199 
 DEBUG (10): Sending SETUP msg: threshold = 199 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 199 
-DEBUG (6): Sending SETUP msg: threshold = 199 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 199 
-DEBUG (8): Sending SETUP msg: threshold = 199 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 199 
-DEBUG (7): Sending SETUP msg: threshold = 199 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 199 
-DEBUG (11): Sending SETUP msg: threshold = 199 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 199 
 DEBUG (9): Sending SETUP msg: threshold = 199 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 199 
-DEBUG (12): Sending SETUP msg: threshold = 199 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 199 
+DEBUG (13): Sending SETUP msg: threshold = 199 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 199 
+DEBUG (6): Sending SETUP msg: threshold = 199 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 199 
+DEBUG (11): Sending SETUP msg: threshold = 199 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 199 
+DEBUG (7): Sending SETUP msg: threshold = 199 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 199 
+DEBUG (8): Sending SETUP msg: threshold = 199 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 199 
 DEBUG (14): Sending SETUP msg: threshold = 199 
 DEBUG (2): Temperature measured : 160 
@@ -303,22 +301,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 164
 DEBUG (3): Sending SETUP msg: threshold = 164 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 164 
 DEBUG (2): Sending SETUP msg: threshold = 164 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 164 
-DEBUG (11): Sending SETUP msg: threshold = 164 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 164 
-DEBUG (7): Sending SETUP msg: threshold = 164 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 164 
-DEBUG (6): Sending SETUP msg: threshold = 164 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 164 
-DEBUG (9): Sending SETUP msg: threshold = 164 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 164 
-DEBUG (10): Sending SETUP msg: threshold = 164 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 164 
 DEBUG (8): Sending SETUP msg: threshold = 164 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 164 
+DEBUG (7): Sending SETUP msg: threshold = 164 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 164 
+DEBUG (10): Sending SETUP msg: threshold = 164 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 164 
+DEBUG (9): Sending SETUP msg: threshold = 164 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 164 
 DEBUG (14): Sending SETUP msg: threshold = 164 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 164 
-DEBUG (12): Sending SETUP msg: threshold = 164 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 164 
+DEBUG (6): Sending SETUP msg: threshold = 164 
+DEBUG (11): Received SETUP msg : from node 7 with threshold 164 
+DEBUG (11): Sending SETUP msg: threshold = 164 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 164 
 DEBUG (13): Sending SETUP msg: threshold = 164 
 DEBUG (2): Temperature measured : 144 
@@ -357,24 +353,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 180
 DEBUG (3): Sending SETUP msg: threshold = 180 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 180 
 DEBUG (2): Sending SETUP msg: threshold = 180 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 180 
-DEBUG (10): Sending SETUP msg: threshold = 180 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 180 
-DEBUG (9): Sending SETUP msg: threshold = 180 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 180 
-DEBUG (13): Sending SETUP msg: threshold = 180 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 180 
 DEBUG (11): Sending SETUP msg: threshold = 180 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 180 
 DEBUG (7): Sending SETUP msg: threshold = 180 
 DEBUG (6): Received SETUP msg : from node 3 with threshold 180 
 DEBUG (6): Sending SETUP msg: threshold = 180 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 180 
+DEBUG (9): Sending SETUP msg: threshold = 180 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 180 
+DEBUG (10): Sending SETUP msg: threshold = 180 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 180 
 DEBUG (8): Sending SETUP msg: threshold = 180 
-DEBUG (12): Received SETUP msg : from node 13 with threshold 180 
-DEBUG (12): Sending SETUP msg: threshold = 180 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 180 
 DEBUG (14): Sending SETUP msg: threshold = 180 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 180 
+DEBUG (13): Sending SETUP msg: threshold = 180 
 DEBUG (2): Temperature measured : 12 
 DEBUG (3): Temperature measured : 63 
 DEBUG (4): Temperature measured : 94 
@@ -424,22 +418,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 151
 DEBUG (3): Sending SETUP msg: threshold = 151 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 151 
 DEBUG (2): Sending SETUP msg: threshold = 151 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 151 
-DEBUG (11): Sending SETUP msg: threshold = 151 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 151 
-DEBUG (7): Sending SETUP msg: threshold = 151 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 151 
-DEBUG (6): Sending SETUP msg: threshold = 151 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 151 
 DEBUG (8): Sending SETUP msg: threshold = 151 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 151 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 151 
+DEBUG (7): Sending SETUP msg: threshold = 151 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 151 
 DEBUG (10): Sending SETUP msg: threshold = 151 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 151 
-DEBUG (9): Sending SETUP msg: threshold = 151 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 151 
+DEBUG (6): Sending SETUP msg: threshold = 151 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 151 
+DEBUG (11): Sending SETUP msg: threshold = 151 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 151 
 DEBUG (14): Sending SETUP msg: threshold = 151 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 151 
-DEBUG (12): Sending SETUP msg: threshold = 151 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 151 
+DEBUG (9): Sending SETUP msg: threshold = 151 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 151 
 DEBUG (13): Sending SETUP msg: threshold = 151 
 DEBUG (2): Temperature measured : 156 
@@ -460,17 +452,21 @@ DEBUG (12): Temperature measured : 103
 DEBUG (13): Temperature measured : 36 
 DEBUG (14): Temperature measured : 171 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 171 
-DEBUG (5): Received DATA msg : from node 10 the measured value 180 of node 10 
-DEBUG (5): Sending DATA msg: sender 10 , measured value 180 
+DEBUG (2): Received DATA msg : from node 10 the measured value 180 of node 10 
+DEBUG (2): Busy -> put in queue DATA msg: sender 2 , measured value 156 
+DEBUG (1): Received DATA msg : from node 2 the measured value 156 of node 2 
 DEBUG (3): Received DATA msg : from node 11 the measured value 173 of node 11 
 DEBUG (3): Busy -> put in queue DATA msg: sender 3 , measured value 166 
+DEBUG (2): Forward DATA msg from queue 
 DEBUG (1): Received DATA msg : from node 3 the measured value 166 of node 3 
-DEBUG (3): Forward DATA msg from queue 
-DEBUG (1): Received DATA msg : from node 5 the measured value 180 of node 10 
-DEBUG (1): Received DATA msg : from node 2 the measured value 156 of node 2 
 DEBUG (8): Received DATA msg : from node 14 the measured value 171 of node 14 
 DEBUG (8): Sending DATA msg: sender 14 , measured value 171 
+DEBUG (3): Forward DATA msg from queue 
+DEBUG (1): Received DATA msg : from node 2 the measured value 180 of node 10 
+DEBUG (4): Received DATA msg : from node 8 the measured value 171 of node 14 
+DEBUG (4): Sending DATA msg: sender 14 , measured value 171 
 DEBUG (1): Received DATA msg : from node 3 the measured value 173 of node 11 
+DEBUG (1): Received DATA msg : from node 4 the measured value 171 of node 14 
 DEBUG (2): Temperature measured : 33 
 DEBUG (3): Temperature measured : 131 
 DEBUG (4): Temperature measured : 167 
@@ -485,26 +481,21 @@ DEBUG (10): Temperature measured : 143
 DEBUG (11): Temperature measured : 155 
 DEBUG (11): Sending DATA msg: sender 11 , measured value 155 
 DEBUG (12): Temperature measured : 177 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 177 
 DEBUG (13): Temperature measured : 163 
 DEBUG (13): Sending DATA msg: sender 13 , measured value 163 
 DEBUG (14): Temperature measured : 131 
-DEBUG (10): Received DATA msg : from node 13 the measured value 163 of node 13 
-DEBUG (10): Sending DATA msg: sender 13 , measured value 163 
-DEBUG (7): Received DATA msg : from node 12 the measured value 177 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 177 
-DEBUG (5): Received DATA msg : from node 9 the measured value 164 of node 9 
-DEBUG (5): Sending DATA msg: sender 9 , measured value 164 
+DEBUG (1): Received DATA msg : from node 4 the measured value 167 of node 4 
 DEBUG (3): Received DATA msg : from node 11 the measured value 155 of node 11 
 DEBUG (3): Sending DATA msg: sender 11 , measured value 155 
+DEBUG (10): Received DATA msg : from node 13 the measured value 163 of node 13 
+DEBUG (10): Sending DATA msg: sender 13 , measured value 163 
+DEBUG (5): Received DATA msg : from node 9 the measured value 164 of node 9 
+DEBUG (5): Sending DATA msg: sender 9 , measured value 164 
 DEBUG (1): Received DATA msg : from node 3 the measured value 155 of node 11 
-DEBUG (5): Received DATA msg : from node 10 the measured value 163 of node 13 
-DEBUG (5): Busy -> put in queue DATA msg: sender 9 , measured value 164 
-DEBUG (1): Received DATA msg : from node 4 the measured value 167 of node 4 
-DEBUG (3): Received DATA msg : from node 7 the measured value 177 of node 12 
-DEBUG (3): Sending DATA msg: sender 12 , measured value 177 
+DEBUG (2): Received DATA msg : from node 10 the measured value 163 of node 13 
+DEBUG (2): Sending DATA msg: sender 13 , measured value 163 
 DEBUG (1): Received DATA msg : from node 5 the measured value 164 of node 9 
-DEBUG (5): Forward DATA msg from queue 
+DEBUG (1): Received DATA msg : from node 2 the measured value 163 of node 13 
 DEBUG (1): New threshold value: 157 
 DEBUG (1): Sending SETUP msg: threshold = 157 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 157 
@@ -515,24 +506,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 157
 DEBUG (3): Sending SETUP msg: threshold = 157 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 157 
 DEBUG (2): Sending SETUP msg: threshold = 157 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 157 
-DEBUG (8): Sending SETUP msg: threshold = 157 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 157 
-DEBUG (7): Sending SETUP msg: threshold = 157 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 157 
-DEBUG (12): Sending SETUP msg: threshold = 157 
-DEBUG (11): Received SETUP msg : from node 7 with threshold 157 
-DEBUG (11): Sending SETUP msg: threshold = 157 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 157 
-DEBUG (14): Sending SETUP msg: threshold = 157 
 DEBUG (10): Received SETUP msg : from node 5 with threshold 157 
 DEBUG (10): Sending SETUP msg: threshold = 157 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 157 
 DEBUG (9): Sending SETUP msg: threshold = 157 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 157 
 DEBUG (6): Sending SETUP msg: threshold = 157 
-DEBUG (13): Received SETUP msg : from node 12 with threshold 157 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 157 
+DEBUG (11): Sending SETUP msg: threshold = 157 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 157 
+DEBUG (7): Sending SETUP msg: threshold = 157 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 157 
 DEBUG (13): Sending SETUP msg: threshold = 157 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 157 
+DEBUG (8): Sending SETUP msg: threshold = 157 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 157 
+DEBUG (14): Sending SETUP msg: threshold = 157 
 DEBUG (2): Temperature measured : 108 
 DEBUG (3): Temperature measured : 62 
 DEBUG (4): Temperature measured : 78 
@@ -548,15 +537,13 @@ DEBUG (12): Temperature measured : 136
 DEBUG (13): Temperature measured : 50 
 DEBUG (14): Temperature measured : 177 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 177 
-DEBUG (7): Received DATA msg : from node 11 the measured value 177 of node 11 
-DEBUG (7): Sending DATA msg: sender 11 , measured value 177 
 DEBUG (8): Received DATA msg : from node 14 the measured value 177 of node 14 
 DEBUG (8): Sending DATA msg: sender 14 , measured value 177 
-DEBUG (4): Received DATA msg : from node 7 the measured value 177 of node 11 
-DEBUG (4): Sending DATA msg: sender 11 , measured value 177 
-DEBUG (1): Received DATA msg : from node 4 the measured value 177 of node 11 
 DEBUG (4): Received DATA msg : from node 8 the measured value 177 of node 14 
 DEBUG (4): Sending DATA msg: sender 14 , measured value 177 
+DEBUG (3): Received DATA msg : from node 11 the measured value 177 of node 11 
+DEBUG (3): Sending DATA msg: sender 11 , measured value 177 
+DEBUG (1): Received DATA msg : from node 3 the measured value 177 of node 11 
 DEBUG (1): Received DATA msg : from node 4 the measured value 177 of node 14 
 DEBUG (2): Temperature measured : 30 
 DEBUG (3): Temperature measured : 153 
@@ -587,24 +574,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 155
 DEBUG (3): Sending SETUP msg: threshold = 155 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 155 
 DEBUG (2): Sending SETUP msg: threshold = 155 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 155 
+DEBUG (10): Sending SETUP msg: threshold = 155 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 155 
+DEBUG (9): Sending SETUP msg: threshold = 155 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 155 
 DEBUG (8): Sending SETUP msg: threshold = 155 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 155 
 DEBUG (7): Sending SETUP msg: threshold = 155 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 155 
 DEBUG (6): Sending SETUP msg: threshold = 155 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 155 
-DEBUG (10): Sending SETUP msg: threshold = 155 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 155 
 DEBUG (11): Sending SETUP msg: threshold = 155 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 155 
-DEBUG (12): Sending SETUP msg: threshold = 155 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 155 
-DEBUG (14): Sending SETUP msg: threshold = 155 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 155 
 DEBUG (13): Sending SETUP msg: threshold = 155 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 155 
-DEBUG (9): Sending SETUP msg: threshold = 155 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 155 
+DEBUG (14): Sending SETUP msg: threshold = 155 
 DEBUG (2): Temperature measured : 147 
 DEBUG (3): Temperature measured : 140 
 DEBUG (4): Temperature measured : 28 
@@ -618,22 +603,18 @@ DEBUG (9): Temperature measured : 22
 DEBUG (10): Temperature measured : 113 
 DEBUG (11): Temperature measured : 31 
 DEBUG (12): Temperature measured : 172 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 172 
 DEBUG (13): Temperature measured : 164 
 DEBUG (13): Sending DATA msg: sender 13 , measured value 164 
 DEBUG (14): Temperature measured : 0 
-DEBUG (4): Received DATA msg : from node 7 the measured value 173 of node 7 
-DEBUG (4): Sending DATA msg: sender 7 , measured value 173 
 DEBUG (10): Received DATA msg : from node 13 the measured value 164 of node 13 
 DEBUG (10): Sending DATA msg: sender 13 , measured value 164 
-DEBUG (7): Received DATA msg : from node 12 the measured value 172 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 172 
-DEBUG (4): Received DATA msg : from node 7 the measured value 172 of node 12 
-DEBUG (4): Sending DATA msg: sender 12 , measured value 172 
-DEBUG (2): Received DATA msg : from node 10 the measured value 164 of node 13 
-DEBUG (2): Sending DATA msg: sender 13 , measured value 164 
-DEBUG (1): Received DATA msg : from node 4 the measured value 172 of node 12 
-DEBUG (1): Received DATA msg : from node 2 the measured value 164 of node 13 
+DEBUG (4): Received DATA msg : from node 7 the measured value 173 of node 7 
+DEBUG (4): Sending DATA msg: sender 7 , measured value 173 
+DEBUG (1): Received DATA msg : from node 5 the measured value 168 of node 5 
+DEBUG (5): Received DATA msg : from node 10 the measured value 164 of node 13 
+DEBUG (5): Sending DATA msg: sender 13 , measured value 164 
+DEBUG (1): Received DATA msg : from node 5 the measured value 164 of node 13 
+DEBUG (1): Received DATA msg : from node 4 the measured value 173 of node 7 
 DEBUG (2): Temperature measured : 168 
 DEBUG (2): Sending DATA msg: sender 2 , measured value 168 
 DEBUG (3): Temperature measured : 21 
@@ -649,7 +630,10 @@ DEBUG (11): Temperature measured : 148
 DEBUG (12): Temperature measured : 148 
 DEBUG (13): Temperature measured : 108 
 DEBUG (14): Temperature measured : 51 
+DEBUG (5): Received DATA msg : from node 9 the measured value 156 of node 9 
+DEBUG (5): Sending DATA msg: sender 9 , measured value 156 
 DEBUG (1): Received DATA msg : from node 2 the measured value 168 of node 2 
+DEBUG (1): Received DATA msg : from node 5 the measured value 156 of node 9 
 DEBUG (1): New threshold value: 191 
 DEBUG (1): Sending SETUP msg: threshold = 191 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 191 
@@ -660,24 +644,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 191
 DEBUG (3): Sending SETUP msg: threshold = 191 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 191 
 DEBUG (2): Sending SETUP msg: threshold = 191 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 191 
-DEBUG (8): Sending SETUP msg: threshold = 191 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 191 
-DEBUG (7): Sending SETUP msg: threshold = 191 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 191 
+DEBUG (10): Sending SETUP msg: threshold = 191 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 191 
+DEBUG (6): Sending SETUP msg: threshold = 191 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 191 
 DEBUG (11): Sending SETUP msg: threshold = 191 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 191 
-DEBUG (6): Sending SETUP msg: threshold = 191 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 191 
+DEBUG (7): Sending SETUP msg: threshold = 191 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 191 
 DEBUG (9): Sending SETUP msg: threshold = 191 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 191 
-DEBUG (12): Sending SETUP msg: threshold = 191 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 191 
+DEBUG (8): Sending SETUP msg: threshold = 191 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 191 
+DEBUG (13): Sending SETUP msg: threshold = 191 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 191 
 DEBUG (14): Sending SETUP msg: threshold = 191 
-DEBUG (13): Received SETUP msg : from node 12 with threshold 191 
-DEBUG (13): Sending SETUP msg: threshold = 191 
-DEBUG (10): Received SETUP msg : from node 13 with threshold 191 
-DEBUG (10): Sending SETUP msg: threshold = 191 
 DEBUG (2): Temperature measured : 45 
 DEBUG (3): Temperature measured : 21 
 DEBUG (4): Temperature measured : 55 
@@ -714,24 +696,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 193
 DEBUG (3): Sending SETUP msg: threshold = 193 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 193 
 DEBUG (2): Sending SETUP msg: threshold = 193 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 193 
-DEBUG (8): Sending SETUP msg: threshold = 193 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 193 
-DEBUG (7): Sending SETUP msg: threshold = 193 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 193 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 193 
 DEBUG (10): Sending SETUP msg: threshold = 193 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 193 
-DEBUG (9): Sending SETUP msg: threshold = 193 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 193 
-DEBUG (11): Sending SETUP msg: threshold = 193 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 193 
-DEBUG (14): Sending SETUP msg: threshold = 193 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 193 
-DEBUG (12): Sending SETUP msg: threshold = 193 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 193 
+DEBUG (6): Sending SETUP msg: threshold = 193 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 193 
 DEBUG (13): Sending SETUP msg: threshold = 193 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 193 
-DEBUG (6): Sending SETUP msg: threshold = 193 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 193 
+DEBUG (11): Sending SETUP msg: threshold = 193 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 193 
+DEBUG (7): Sending SETUP msg: threshold = 193 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 193 
+DEBUG (9): Sending SETUP msg: threshold = 193 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 193 
+DEBUG (8): Sending SETUP msg: threshold = 193 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 193 
+DEBUG (14): Sending SETUP msg: threshold = 193 
 DEBUG (2): Temperature measured : 44 
 DEBUG (3): Temperature measured : 140 
 DEBUG (4): Temperature measured : 123 
@@ -768,22 +748,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 174
 DEBUG (3): Sending SETUP msg: threshold = 174 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 174 
 DEBUG (2): Sending SETUP msg: threshold = 174 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 174 
+DEBUG (8): Sending SETUP msg: threshold = 174 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 174 
+DEBUG (7): Sending SETUP msg: threshold = 174 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 174 
 DEBUG (10): Sending SETUP msg: threshold = 174 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 174 
 DEBUG (6): Sending SETUP msg: threshold = 174 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 174 
-DEBUG (9): Sending SETUP msg: threshold = 174 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 174 
-DEBUG (7): Sending SETUP msg: threshold = 174 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 174 
-DEBUG (8): Sending SETUP msg: threshold = 174 
-DEBUG (11): Received SETUP msg : from node 6 with threshold 174 
-DEBUG (11): Sending SETUP msg: threshold = 174 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 174 
 DEBUG (13): Sending SETUP msg: threshold = 174 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 174 
-DEBUG (12): Sending SETUP msg: threshold = 174 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 174 
+DEBUG (9): Sending SETUP msg: threshold = 174 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 174 
+DEBUG (11): Sending SETUP msg: threshold = 174 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 174 
 DEBUG (14): Sending SETUP msg: threshold = 174 
 DEBUG (2): Temperature measured : 4 
@@ -830,34 +808,35 @@ DEBUG (12): Temperature measured : 168
 DEBUG (13): Temperature measured : 61 
 DEBUG (14): Temperature measured : 174 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 174 
+DEBUG (8): Received DATA msg : from node 14 the measured value 174 of node 14 
+DEBUG (8): Sending DATA msg: sender 14 , measured value 174 
+DEBUG (4): Received DATA msg : from node 8 the measured value 174 of node 14 
+DEBUG (4): Sending DATA msg: sender 14 , measured value 174 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 188 
 DEBUG (5): Sending SETUP msg: threshold = 188 
 DEBUG (4): Received SETUP msg : from node 1 with threshold 188 
-DEBUG (4): Sending SETUP msg: threshold = 188 
+DEBUG (4): Busy -> put in queue SETUP msg: threshold = 14 
 DEBUG (3): Received SETUP msg : from node 1 with threshold 188 
 DEBUG (3): Sending SETUP msg: threshold = 188 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 188 
 DEBUG (2): Sending SETUP msg: threshold = 188 
-DEBUG (8): Received DATA msg : from node 14 the measured value 174 of node 14 
-DEBUG (8): Sending DATA msg: sender 14 , measured value 174 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 188 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 188 
 DEBUG (10): Sending SETUP msg: threshold = 188 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 188 
+DEBUG (9): Sending SETUP msg: threshold = 188 
+DEBUG (4): Forward SETUP msg from queue 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 188 
 DEBUG (7): Sending SETUP msg: threshold = 188 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 188 
 DEBUG (11): Sending SETUP msg: threshold = 188 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 188 
-DEBUG (9): Sending SETUP msg: threshold = 188 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 188 
-DEBUG (12): Sending SETUP msg: threshold = 188 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 188 
 DEBUG (8): Sending SETUP msg: threshold = 188 
-DEBUG (13): Received SETUP msg : from node 12 with threshold 188 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 188 
+DEBUG (14): Sending SETUP msg: threshold = 188 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 188 
 DEBUG (13): Sending SETUP msg: threshold = 188 
 DEBUG (6): Received SETUP msg : from node 11 with threshold 188 
 DEBUG (6): Sending SETUP msg: threshold = 188 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 188 
-DEBUG (14): Sending SETUP msg: threshold = 188 
 DEBUG (2): Temperature measured : 53 
 DEBUG (3): Temperature measured : 51 
 DEBUG (4): Temperature measured : 133 
@@ -894,24 +873,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 195
 DEBUG (3): Sending SETUP msg: threshold = 195 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 195 
 DEBUG (2): Sending SETUP msg: threshold = 195 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 195 
-DEBUG (8): Sending SETUP msg: threshold = 195 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 195 
-DEBUG (7): Sending SETUP msg: threshold = 195 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 195 
 DEBUG (11): Sending SETUP msg: threshold = 195 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 195 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 195 
+DEBUG (7): Sending SETUP msg: threshold = 195 
+DEBUG (6): Received SETUP msg : from node 3 with threshold 195 
+DEBUG (6): Sending SETUP msg: threshold = 195 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 195 
+DEBUG (8): Sending SETUP msg: threshold = 195 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 195 
 DEBUG (10): Sending SETUP msg: threshold = 195 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 195 
-DEBUG (13): Sending SETUP msg: threshold = 195 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 195 
-DEBUG (12): Sending SETUP msg: threshold = 195 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 195 
-DEBUG (14): Sending SETUP msg: threshold = 195 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 195 
 DEBUG (9): Sending SETUP msg: threshold = 195 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 195 
-DEBUG (6): Sending SETUP msg: threshold = 195 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 195 
+DEBUG (14): Sending SETUP msg: threshold = 195 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 195 
+DEBUG (13): Sending SETUP msg: threshold = 195 
 DEBUG (2): Temperature measured : 13 
 DEBUG (3): Temperature measured : 99 
 DEBUG (4): Temperature measured : 113 
@@ -948,24 +925,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 165
 DEBUG (3): Sending SETUP msg: threshold = 165 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 165 
 DEBUG (2): Sending SETUP msg: threshold = 165 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 165 
-DEBUG (10): Sending SETUP msg: threshold = 165 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 165 
-DEBUG (6): Sending SETUP msg: threshold = 165 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 165 
 DEBUG (8): Sending SETUP msg: threshold = 165 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 165 
 DEBUG (7): Sending SETUP msg: threshold = 165 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 165 
-DEBUG (9): Sending SETUP msg: threshold = 165 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 165 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 165 
+DEBUG (10): Sending SETUP msg: threshold = 165 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 165 
+DEBUG (6): Sending SETUP msg: threshold = 165 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 165 
 DEBUG (11): Sending SETUP msg: threshold = 165 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 165 
-DEBUG (12): Sending SETUP msg: threshold = 165 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 165 
 DEBUG (13): Sending SETUP msg: threshold = 165 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 165 
 DEBUG (14): Sending SETUP msg: threshold = 165 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 165 
+DEBUG (9): Sending SETUP msg: threshold = 165 
 DEBUG (2): Temperature measured : 94 
 DEBUG (3): Temperature measured : 118 
 DEBUG (4): Temperature measured : 26 
@@ -977,14 +952,8 @@ DEBUG (9): Temperature measured : 40
 DEBUG (10): Temperature measured : 82 
 DEBUG (11): Temperature measured : 48 
 DEBUG (12): Temperature measured : 165 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 165 
 DEBUG (13): Temperature measured : 92 
 DEBUG (14): Temperature measured : 139 
-DEBUG (7): Received DATA msg : from node 12 the measured value 165 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 165 
-DEBUG (4): Received DATA msg : from node 7 the measured value 165 of node 12 
-DEBUG (4): Sending DATA msg: sender 12 , measured value 165 
-DEBUG (1): Received DATA msg : from node 4 the measured value 165 of node 12 
 DEBUG (2): Temperature measured : 105 
 DEBUG (3): Temperature measured : 53 
 DEBUG (4): Temperature measured : 14 
@@ -1012,20 +981,18 @@ DEBUG (8): Received SETUP msg : from node 4 with threshold 176
 DEBUG (8): Sending SETUP msg: threshold = 176 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 176 
 DEBUG (7): Sending SETUP msg: threshold = 176 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 176 
-DEBUG (14): Sending SETUP msg: threshold = 176 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 176 
 DEBUG (10): Sending SETUP msg: threshold = 176 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 176 
 DEBUG (6): Sending SETUP msg: threshold = 176 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 176 
 DEBUG (11): Sending SETUP msg: threshold = 176 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 176 
-DEBUG (13): Sending SETUP msg: threshold = 176 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 176 
 DEBUG (9): Sending SETUP msg: threshold = 176 
-DEBUG (12): Received SETUP msg : from node 13 with threshold 176 
-DEBUG (12): Sending SETUP msg: threshold = 176 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 176 
+DEBUG (13): Sending SETUP msg: threshold = 176 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 176 
+DEBUG (14): Sending SETUP msg: threshold = 176 
 DEBUG (2): Temperature measured : 79 
 DEBUG (3): Temperature measured : 144 
 DEBUG (4): Temperature measured : 30 
@@ -1068,20 +1035,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 173
 DEBUG (3): Sending SETUP msg: threshold = 173 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 173 
 DEBUG (2): Sending SETUP msg: threshold = 173 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 173 
-DEBUG (10): Sending SETUP msg: threshold = 173 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 173 
-DEBUG (6): Sending SETUP msg: threshold = 173 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 173 
-DEBUG (9): Sending SETUP msg: threshold = 173 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 173 
 DEBUG (8): Sending SETUP msg: threshold = 173 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 173 
 DEBUG (7): Sending SETUP msg: threshold = 173 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 173 
+DEBUG (10): Sending SETUP msg: threshold = 173 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 173 
+DEBUG (6): Sending SETUP msg: threshold = 173 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 173 
 DEBUG (11): Sending SETUP msg: threshold = 173 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 173 
 DEBUG (13): Sending SETUP msg: threshold = 173 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 173 
+DEBUG (9): Sending SETUP msg: threshold = 173 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 173 
 DEBUG (14): Sending SETUP msg: threshold = 173 
 DEBUG (2): Temperature measured : 143 
@@ -1126,24 +1093,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 158
 DEBUG (3): Sending SETUP msg: threshold = 158 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 158 
 DEBUG (2): Sending SETUP msg: threshold = 158 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 158 
-DEBUG (10): Sending SETUP msg: threshold = 158 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 158 
 DEBUG (11): Sending SETUP msg: threshold = 158 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 158 
 DEBUG (7): Sending SETUP msg: threshold = 158 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
-DEBUG (9): Sending SETUP msg: threshold = 158 
+DEBUG (6): Received SETUP msg : from node 3 with threshold 158 
+DEBUG (6): Sending SETUP msg: threshold = 158 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 158 
 DEBUG (8): Sending SETUP msg: threshold = 158 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 158 
-DEBUG (6): Sending SETUP msg: threshold = 158 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 158 
+DEBUG (10): Sending SETUP msg: threshold = 158 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
+DEBUG (9): Sending SETUP msg: threshold = 158 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 158 
 DEBUG (14): Sending SETUP msg: threshold = 158 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 158 
 DEBUG (13): Sending SETUP msg: threshold = 158 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 158 
-DEBUG (12): Sending SETUP msg: threshold = 158 
 DEBUG (2): Temperature measured : 73 
 DEBUG (3): Temperature measured : 66 
 DEBUG (4): Temperature measured : 54 
@@ -1159,14 +1124,14 @@ DEBUG (12): Temperature measured : 153
 DEBUG (13): Temperature measured : 146 
 DEBUG (14): Temperature measured : 162 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 162 
-DEBUG (2): Received DATA msg : from node 10 the measured value 159 of node 10 
-DEBUG (2): Sending DATA msg: sender 10 , measured value 159 
-DEBUG (1): Received DATA msg : from node 2 the measured value 159 of node 10 
 DEBUG (8): Received DATA msg : from node 14 the measured value 162 of node 14 
 DEBUG (8): Sending DATA msg: sender 14 , measured value 162 
 DEBUG (4): Received DATA msg : from node 8 the measured value 162 of node 14 
 DEBUG (4): Sending DATA msg: sender 14 , measured value 162 
+DEBUG (5): Received DATA msg : from node 10 the measured value 159 of node 10 
+DEBUG (5): Sending DATA msg: sender 10 , measured value 159 
 DEBUG (1): Received DATA msg : from node 4 the measured value 162 of node 14 
+DEBUG (1): Received DATA msg : from node 5 the measured value 159 of node 10 
 DEBUG (2): Temperature measured : 141 
 DEBUG (3): Temperature measured : 54 
 DEBUG (4): Temperature measured : 156 
@@ -1178,14 +1143,8 @@ DEBUG (9): Temperature measured : 77
 DEBUG (10): Temperature measured : 129 
 DEBUG (11): Temperature measured : 89 
 DEBUG (12): Temperature measured : 170 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 170 
 DEBUG (13): Temperature measured : 115 
 DEBUG (14): Temperature measured : 146 
-DEBUG (7): Received DATA msg : from node 12 the measured value 170 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 170 
-DEBUG (3): Received DATA msg : from node 7 the measured value 170 of node 12 
-DEBUG (3): Sending DATA msg: sender 12 , measured value 170 
-DEBUG (1): Received DATA msg : from node 3 the measured value 170 of node 12 
 DEBUG (1): New threshold value: 156 
 DEBUG (1): Sending SETUP msg: threshold = 156 
 DEBUG (2): Temperature measured : 95 
@@ -1202,33 +1161,30 @@ DEBUG (11): Temperature measured : 92
 DEBUG (12): Temperature measured : 52 
 DEBUG (13): Temperature measured : 8 
 DEBUG (14): Temperature measured : 153 
-DEBUG (5): Received SETUP msg : from node 1 with threshold 156 
-DEBUG (5): Sending SETUP msg: threshold = 156 
 DEBUG (4): Received SETUP msg : from node 1 with threshold 156 
 DEBUG (4): Sending SETUP msg: threshold = 156 
 DEBUG (3): Received SETUP msg : from node 1 with threshold 156 
 DEBUG (3): Sending SETUP msg: threshold = 156 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 156 
 DEBUG (2): Sending SETUP msg: threshold = 156 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 156 
-DEBUG (10): Sending SETUP msg: threshold = 156 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 156 
-DEBUG (6): Sending SETUP msg: threshold = 156 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 156 
-DEBUG (9): Busy -> put in queue SETUP msg: threshold = 9 
-DEBUG (11): Received SETUP msg : from node 6 with threshold 156 
-DEBUG (11): Sending SETUP msg: threshold = 156 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 156 
-DEBUG (13): Sending SETUP msg: threshold = 156 
-DEBUG (9): Forward SETUP msg from queue 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 156 
 DEBUG (8): Sending SETUP msg: threshold = 156 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 156 
 DEBUG (7): Sending SETUP msg: threshold = 156 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 156 
+DEBUG (11): Sending SETUP msg: threshold = 156 
+DEBUG (5): Received SETUP msg : from node 2 with threshold 156 
+DEBUG (5): Sending SETUP msg: threshold = 156 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 156 
+DEBUG (10): Sending SETUP msg: threshold = 156 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 156 
 DEBUG (14): Sending SETUP msg: threshold = 156 
-DEBUG (12): Received SETUP msg : from node 13 with threshold 156 
-DEBUG (12): Sending SETUP msg: threshold = 156 
+DEBUG (6): Received SETUP msg : from node 11 with threshold 156 
+DEBUG (6): Sending SETUP msg: threshold = 156 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 156 
+DEBUG (13): Sending SETUP msg: threshold = 156 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 156 
+DEBUG (9): Sending SETUP msg: threshold = 156 
 DEBUG (2): Temperature measured : 47 
 DEBUG (3): Temperature measured : 161 
 DEBUG (3): Sending DATA msg: sender 3 , measured value 161 
@@ -1268,7 +1224,9 @@ DEBUG (4): Sending DATA msg: sender 8 , measured value 165
 DEBUG (5): Received DATA msg : from node 9 the measured value 160 of node 9 
 DEBUG (5): Sending DATA msg: sender 9 , measured value 160 
 DEBUG (1): Received DATA msg : from node 4 the measured value 165 of node 8 
-DEBUG (1): Received DATA msg : from node 5 the measured value 160 of node 9 
+DEBUG (2): Received DATA msg : from node 5 the measured value 160 of node 9 
+DEBUG (2): Sending DATA msg: sender 9 , measured value 160 
+DEBUG (1): Received DATA msg : from node 2 the measured value 160 of node 9 
 DEBUG (1): New threshold value: 184 
 DEBUG (1): Sending SETUP msg: threshold = 184 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 184 
@@ -1279,24 +1237,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 184
 DEBUG (3): Sending SETUP msg: threshold = 184 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 184 
 DEBUG (2): Sending SETUP msg: threshold = 184 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 184 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 184 
 DEBUG (10): Sending SETUP msg: threshold = 184 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 184 
-DEBUG (9): Sending SETUP msg: threshold = 184 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 184 
+DEBUG (6): Sending SETUP msg: threshold = 184 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 184 
 DEBUG (11): Sending SETUP msg: threshold = 184 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 184 
-DEBUG (7): Sending SETUP msg: threshold = 184 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 184 
-DEBUG (6): Sending SETUP msg: threshold = 184 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 184 
-DEBUG (13): Sending SETUP msg: threshold = 184 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 184 
-DEBUG (12): Sending SETUP msg: threshold = 184 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 184 
 DEBUG (8): Sending SETUP msg: threshold = 184 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 184 
+DEBUG (9): Sending SETUP msg: threshold = 184 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 184 
+DEBUG (13): Sending SETUP msg: threshold = 184 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 184 
 DEBUG (14): Sending SETUP msg: threshold = 184 
+DEBUG (7): Received SETUP msg : from node 11 with threshold 184 
+DEBUG (7): Sending SETUP msg: threshold = 184 
 DEBUG (2): Temperature measured : 148 
 DEBUG (3): Temperature measured : 168 
 DEBUG (4): Temperature measured : 102 
@@ -1333,24 +1289,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 161
 DEBUG (3): Sending SETUP msg: threshold = 161 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 161 
 DEBUG (2): Sending SETUP msg: threshold = 161 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 161 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 161 
 DEBUG (10): Sending SETUP msg: threshold = 161 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 161 
-DEBUG (6): Sending SETUP msg: threshold = 161 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 161 
+DEBUG (9): Sending SETUP msg: threshold = 161 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 161 
 DEBUG (8): Sending SETUP msg: threshold = 161 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 161 
 DEBUG (7): Sending SETUP msg: threshold = 161 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 161 
-DEBUG (9): Sending SETUP msg: threshold = 161 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 161 
-DEBUG (12): Sending SETUP msg: threshold = 161 
-DEBUG (11): Received SETUP msg : from node 7 with threshold 161 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 161 
 DEBUG (11): Sending SETUP msg: threshold = 161 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 161 
-DEBUG (13): Sending SETUP msg: threshold = 161 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 161 
 DEBUG (14): Sending SETUP msg: threshold = 161 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 161 
+DEBUG (13): Sending SETUP msg: threshold = 161 
+DEBUG (6): Received SETUP msg : from node 11 with threshold 161 
+DEBUG (6): Sending SETUP msg: threshold = 161 
 DEBUG (2): Temperature measured : 164 
 DEBUG (2): Sending DATA msg: sender 2 , measured value 164 
 DEBUG (3): Temperature measured : 111 
@@ -1385,30 +1339,28 @@ DEBUG (4): Sending DATA msg: sender 8 , measured value 168
 DEBUG (1): Received DATA msg : from node 4 the measured value 168 of node 8 
 DEBUG (1): New threshold value: 175 
 DEBUG (1): Sending SETUP msg: threshold = 175 
-DEBUG (5): Received SETUP msg : from node 1 with threshold 175 
-DEBUG (5): Sending SETUP msg: threshold = 175 
-DEBUG (4): Received SETUP msg : from node 1 with threshold 175 
-DEBUG (4): Sending SETUP msg: threshold = 175 
-DEBUG (3): Received SETUP msg : from node 1 with threshold 175 
-DEBUG (3): Sending SETUP msg: threshold = 175 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 175 
 DEBUG (2): Sending SETUP msg: threshold = 175 
+DEBUG (4): Received SETUP msg : from node 1 with threshold 175 
+DEBUG (4): Sending SETUP msg: threshold = 175 
+DEBUG (5): Received SETUP msg : from node 1 with threshold 175 
+DEBUG (5): Sending SETUP msg: threshold = 175 
+DEBUG (3): Received SETUP msg : from node 1 with threshold 175 
+DEBUG (3): Sending SETUP msg: threshold = 175 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 175 
 DEBUG (8): Sending SETUP msg: threshold = 175 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 175 
-DEBUG (7): Sending SETUP msg: threshold = 175 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 175 
-DEBUG (11): Sending SETUP msg: threshold = 175 
 DEBUG (6): Received SETUP msg : from node 3 with threshold 175 
 DEBUG (6): Sending SETUP msg: threshold = 175 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 175 
-DEBUG (10): Sending SETUP msg: threshold = 175 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 175 
+DEBUG (11): Sending SETUP msg: threshold = 175 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 175 
 DEBUG (14): Sending SETUP msg: threshold = 175 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 175 
+DEBUG (10): Sending SETUP msg: threshold = 175 
+DEBUG (7): Received SETUP msg : from node 11 with threshold 175 
+DEBUG (7): Sending SETUP msg: threshold = 175 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 175 
 DEBUG (9): Sending SETUP msg: threshold = 175 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 175 
-DEBUG (12): Sending SETUP msg: threshold = 175 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 175 
 DEBUG (13): Sending SETUP msg: threshold = 175 
 DEBUG (2): Temperature measured : 35 
@@ -1455,22 +1407,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 163
 DEBUG (3): Sending SETUP msg: threshold = 163 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 163 
 DEBUG (2): Sending SETUP msg: threshold = 163 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 163 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 163 
 DEBUG (10): Sending SETUP msg: threshold = 163 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 163 
-DEBUG (9): Sending SETUP msg: threshold = 163 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 163 
 DEBUG (6): Sending SETUP msg: threshold = 163 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 163 
-DEBUG (8): Sending SETUP msg: threshold = 163 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 163 
-DEBUG (7): Sending SETUP msg: threshold = 163 
-DEBUG (11): Received SETUP msg : from node 6 with threshold 163 
-DEBUG (11): Sending SETUP msg: threshold = 163 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 163 
+DEBUG (9): Sending SETUP msg: threshold = 163 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 163 
 DEBUG (13): Sending SETUP msg: threshold = 163 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 163 
-DEBUG (12): Sending SETUP msg: threshold = 163 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 163 
+DEBUG (11): Sending SETUP msg: threshold = 163 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 163 
+DEBUG (7): Sending SETUP msg: threshold = 163 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 163 
+DEBUG (8): Sending SETUP msg: threshold = 163 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 163 
 DEBUG (14): Sending SETUP msg: threshold = 163 
 DEBUG (2): Temperature measured : 37 
@@ -1490,21 +1440,14 @@ DEBUG (13): Temperature measured : 163
 DEBUG (13): Sending DATA msg: sender 13 , measured value 163 
 DEBUG (14): Temperature measured : 177 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 177 
-DEBUG (8): Received DATA msg : from node 14 the measured value 177 of node 14 
-DEBUG (8): Busy -> put in queue DATA msg: sender 8 , measured value 167 
-DEBUG (10): Received DATA msg : from node 13 the measured value 163 of node 13 
-DEBUG (10): Sending DATA msg: sender 13 , measured value 163 
 DEBUG (1): Received DATA msg : from node 5 the measured value 165 of node 5 
 DEBUG (4): Received DATA msg : from node 8 the measured value 167 of node 8 
 DEBUG (4): Sending DATA msg: sender 8 , measured value 167 
-DEBUG (8): Forward DATA msg from queue 
-DEBUG (4): Received DATA msg : from node 8 the measured value 177 of node 14 
-DEBUG (4): Busy -> put in queue DATA msg: sender 8 , measured value 167 
-DEBUG (5): Received DATA msg : from node 10 the measured value 163 of node 13 
-DEBUG (5): Sending DATA msg: sender 13 , measured value 163 
+DEBUG (8): Received DATA msg : from node 14 the measured value 177 of node 14 
+DEBUG (8): Sending DATA msg: sender 14 , measured value 177 
 DEBUG (1): Received DATA msg : from node 4 the measured value 167 of node 8 
-DEBUG (4): Forward DATA msg from queue 
-DEBUG (1): Received DATA msg : from node 5 the measured value 163 of node 13 
+DEBUG (4): Received DATA msg : from node 8 the measured value 177 of node 14 
+DEBUG (4): Sending DATA msg: sender 14 , measured value 177 
 DEBUG (1): Received DATA msg : from node 4 the measured value 177 of node 14 
 DEBUG (2): Temperature measured : 173 
 DEBUG (2): Sending DATA msg: sender 2 , measured value 173 
@@ -1523,15 +1466,11 @@ DEBUG (11): Sending DATA msg: sender 11 , measured value 170
 DEBUG (12): Temperature measured : 136 
 DEBUG (13): Temperature measured : 114 
 DEBUG (14): Temperature measured : 66 
-DEBUG (6): Received DATA msg : from node 11 the measured value 170 of node 11 
-DEBUG (6): Sending DATA msg: sender 11 , measured value 170 
-DEBUG (1): Received DATA msg : from node 4 the measured value 174 of node 4 
 DEBUG (1): Received DATA msg : from node 2 the measured value 173 of node 2 
 DEBUG (4): Received DATA msg : from node 8 the measured value 164 of node 8 
-DEBUG (4): Sending DATA msg: sender 8 , measured value 164 
-DEBUG (2): Received DATA msg : from node 6 the measured value 170 of node 11 
-DEBUG (2): Sending DATA msg: sender 11 , measured value 170 
-DEBUG (1): Received DATA msg : from node 2 the measured value 170 of node 11 
+DEBUG (4): Busy -> put in queue DATA msg: sender 4 , measured value 174 
+DEBUG (1): Received DATA msg : from node 4 the measured value 174 of node 4 
+DEBUG (4): Forward DATA msg from queue 
 DEBUG (1): Received DATA msg : from node 4 the measured value 164 of node 8 
 DEBUG (1): New threshold value: 183 
 DEBUG (1): Sending SETUP msg: threshold = 183 
@@ -1543,24 +1482,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 183
 DEBUG (3): Sending SETUP msg: threshold = 183 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 183 
 DEBUG (2): Sending SETUP msg: threshold = 183 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 183 
-DEBUG (10): Sending SETUP msg: threshold = 183 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 183 
-DEBUG (9): Sending SETUP msg: threshold = 183 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 183 
-DEBUG (6): Sending SETUP msg: threshold = 183 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 183 
-DEBUG (11): Sending SETUP msg: threshold = 183 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 183 
-DEBUG (7): Sending SETUP msg: threshold = 183 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 183 
 DEBUG (8): Sending SETUP msg: threshold = 183 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 183 
-DEBUG (13): Sending SETUP msg: threshold = 183 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 183 
+DEBUG (7): Sending SETUP msg: threshold = 183 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 183 
+DEBUG (10): Sending SETUP msg: threshold = 183 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 183 
+DEBUG (6): Sending SETUP msg: threshold = 183 
+DEBUG (11): Received SETUP msg : from node 7 with threshold 183 
+DEBUG (11): Sending SETUP msg: threshold = 183 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 183 
+DEBUG (9): Sending SETUP msg: threshold = 183 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 183 
 DEBUG (14): Sending SETUP msg: threshold = 183 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 183 
-DEBUG (12): Sending SETUP msg: threshold = 183 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 183 
+DEBUG (13): Sending SETUP msg: threshold = 183 
 DEBUG (2): Temperature measured : 114 
 DEBUG (3): Temperature measured : 150 
 DEBUG (4): Temperature measured : 101 
@@ -1610,22 +1547,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 168
 DEBUG (3): Sending SETUP msg: threshold = 168 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 168 
 DEBUG (2): Sending SETUP msg: threshold = 168 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 168 
+DEBUG (10): Sending SETUP msg: threshold = 168 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 168 
+DEBUG (6): Sending SETUP msg: threshold = 168 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 168 
 DEBUG (11): Sending SETUP msg: threshold = 168 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 168 
 DEBUG (7): Sending SETUP msg: threshold = 168 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 168 
-DEBUG (6): Sending SETUP msg: threshold = 168 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 168 
-DEBUG (9): Sending SETUP msg: threshold = 168 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 168 
-DEBUG (10): Sending SETUP msg: threshold = 168 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 168 
-DEBUG (13): Sending SETUP msg: threshold = 168 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 168 
 DEBUG (8): Sending SETUP msg: threshold = 168 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 168 
-DEBUG (12): Sending SETUP msg: threshold = 168 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 168 
+DEBUG (13): Sending SETUP msg: threshold = 168 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 168 
+DEBUG (9): Sending SETUP msg: threshold = 168 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 168 
 DEBUG (14): Sending SETUP msg: threshold = 168 
 DEBUG (2): Temperature measured : 175 
@@ -1643,10 +1578,10 @@ DEBUG (11): Temperature measured : 53
 DEBUG (12): Temperature measured : 100 
 DEBUG (13): Temperature measured : 162 
 DEBUG (14): Temperature measured : 86 
-DEBUG (5): Received DATA msg : from node 10 the measured value 170 of node 10 
-DEBUG (5): Sending DATA msg: sender 10 , measured value 170 
 DEBUG (1): Received DATA msg : from node 2 the measured value 175 of node 2 
-DEBUG (1): Received DATA msg : from node 5 the measured value 170 of node 10 
+DEBUG (2): Received DATA msg : from node 10 the measured value 170 of node 10 
+DEBUG (2): Sending DATA msg: sender 10 , measured value 170 
+DEBUG (1): Received DATA msg : from node 2 the measured value 170 of node 10 
 DEBUG (2): Temperature measured : 44 
 DEBUG (3): Temperature measured : 137 
 DEBUG (4): Temperature measured : 160 
@@ -1672,22 +1607,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 161
 DEBUG (3): Sending SETUP msg: threshold = 161 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 161 
 DEBUG (2): Sending SETUP msg: threshold = 161 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 161 
-DEBUG (10): Sending SETUP msg: threshold = 161 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 161 
-DEBUG (6): Sending SETUP msg: threshold = 161 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 161 
-DEBUG (9): Sending SETUP msg: threshold = 161 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 161 
 DEBUG (8): Sending SETUP msg: threshold = 161 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 161 
 DEBUG (7): Sending SETUP msg: threshold = 161 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 161 
+DEBUG (10): Sending SETUP msg: threshold = 161 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 161 
+DEBUG (9): Sending SETUP msg: threshold = 161 
+DEBUG (11): Received SETUP msg : from node 7 with threshold 161 
+DEBUG (11): Sending SETUP msg: threshold = 161 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 161 
 DEBUG (13): Sending SETUP msg: threshold = 161 
-DEBUG (11): Received SETUP msg : from node 6 with threshold 161 
-DEBUG (11): Sending SETUP msg: threshold = 161 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 161 
-DEBUG (12): Sending SETUP msg: threshold = 161 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 161 
+DEBUG (6): Sending SETUP msg: threshold = 161 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 161 
 DEBUG (14): Sending SETUP msg: threshold = 161 
 DEBUG (2): Temperature measured : 45 
@@ -1706,9 +1639,9 @@ DEBUG (13): Sending DATA msg: sender 13 , measured value 175
 DEBUG (14): Temperature measured : 72 
 DEBUG (10): Received DATA msg : from node 13 the measured value 175 of node 13 
 DEBUG (10): Sending DATA msg: sender 13 , measured value 175 
-DEBUG (2): Received DATA msg : from node 10 the measured value 175 of node 13 
-DEBUG (2): Sending DATA msg: sender 13 , measured value 175 
-DEBUG (1): Received DATA msg : from node 2 the measured value 175 of node 13 
+DEBUG (5): Received DATA msg : from node 10 the measured value 175 of node 13 
+DEBUG (5): Sending DATA msg: sender 13 , measured value 175 
+DEBUG (1): Received DATA msg : from node 5 the measured value 175 of node 13 
 DEBUG (2): Temperature measured : 83 
 DEBUG (3): Temperature measured : 95 
 DEBUG (4): Temperature measured : 53 
@@ -1723,9 +1656,9 @@ DEBUG (11): Temperature measured : 43
 DEBUG (12): Temperature measured : 87 
 DEBUG (13): Temperature measured : 17 
 DEBUG (14): Temperature measured : 61 
-DEBUG (2): Received DATA msg : from node 10 the measured value 178 of node 10 
-DEBUG (2): Sending DATA msg: sender 10 , measured value 178 
-DEBUG (1): Received DATA msg : from node 2 the measured value 178 of node 10 
+DEBUG (5): Received DATA msg : from node 10 the measured value 178 of node 10 
+DEBUG (5): Sending DATA msg: sender 10 , measured value 178 
+DEBUG (1): Received DATA msg : from node 5 the measured value 178 of node 10 
 DEBUG (1): New threshold value: 179 
 DEBUG (1): Sending SETUP msg: threshold = 179 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 179 
@@ -1736,24 +1669,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 179
 DEBUG (3): Sending SETUP msg: threshold = 179 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 179 
 DEBUG (2): Sending SETUP msg: threshold = 179 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 179 
-DEBUG (10): Sending SETUP msg: threshold = 179 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 179 
-DEBUG (6): Sending SETUP msg: threshold = 179 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 179 
 DEBUG (8): Sending SETUP msg: threshold = 179 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 179 
 DEBUG (7): Sending SETUP msg: threshold = 179 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 179 
+DEBUG (10): Sending SETUP msg: threshold = 179 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 179 
 DEBUG (9): Sending SETUP msg: threshold = 179 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 179 
+DEBUG (6): Sending SETUP msg: threshold = 179 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 179 
+DEBUG (14): Sending SETUP msg: threshold = 179 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 179 
 DEBUG (11): Sending SETUP msg: threshold = 179 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 179 
 DEBUG (13): Sending SETUP msg: threshold = 179 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 179 
-DEBUG (14): Sending SETUP msg: threshold = 179 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 179 
-DEBUG (12): Sending SETUP msg: threshold = 179 
 DEBUG (2): Temperature measured : 104 
 DEBUG (3): Temperature measured : 11 
 DEBUG (4): Temperature measured : 68 
@@ -1790,24 +1721,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 153
 DEBUG (3): Sending SETUP msg: threshold = 153 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 153 
 DEBUG (2): Sending SETUP msg: threshold = 153 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 153 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 153 
 DEBUG (10): Sending SETUP msg: threshold = 153 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 153 
+DEBUG (6): Sending SETUP msg: threshold = 153 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 153 
 DEBUG (9): Sending SETUP msg: threshold = 153 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 153 
-DEBUG (8): Sending SETUP msg: threshold = 153 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 153 
-DEBUG (7): Sending SETUP msg: threshold = 153 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 153 
 DEBUG (11): Sending SETUP msg: threshold = 153 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 153 
-DEBUG (6): Sending SETUP msg: threshold = 153 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 153 
-DEBUG (12): Sending SETUP msg: threshold = 153 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 153 
-DEBUG (14): Sending SETUP msg: threshold = 153 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 153 
+DEBUG (7): Sending SETUP msg: threshold = 153 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 153 
+DEBUG (8): Sending SETUP msg: threshold = 153 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 153 
 DEBUG (13): Sending SETUP msg: threshold = 153 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 153 
+DEBUG (14): Sending SETUP msg: threshold = 153 
 DEBUG (2): Temperature measured : 54 
 DEBUG (3): Temperature measured : 125 
 DEBUG (4): Temperature measured : 137 
@@ -1837,15 +1766,9 @@ DEBUG (9): Temperature measured : 140
 DEBUG (10): Temperature measured : 86 
 DEBUG (11): Temperature measured : 77 
 DEBUG (12): Temperature measured : 158 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 158 
 DEBUG (13): Temperature measured : 84 
 DEBUG (14): Temperature measured : 11 
 DEBUG (1): Received DATA msg : from node 3 the measured value 168 of node 3 
-DEBUG (7): Received DATA msg : from node 12 the measured value 158 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 158 
-DEBUG (4): Received DATA msg : from node 7 the measured value 158 of node 12 
-DEBUG (4): Sending DATA msg: sender 12 , measured value 158 
-DEBUG (1): Received DATA msg : from node 4 the measured value 158 of node 12 
 DEBUG (1): New threshold value: 183 
 DEBUG (1): Sending SETUP msg: threshold = 183 
 DEBUG (5): Received SETUP msg : from node 1 with threshold 183 
@@ -1856,18 +1779,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 183
 DEBUG (3): Sending SETUP msg: threshold = 183 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 183 
 DEBUG (2): Sending SETUP msg: threshold = 183 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 183 
+DEBUG (10): Sending SETUP msg: threshold = 183 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 183 
+DEBUG (6): Sending SETUP msg: threshold = 183 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 183 
 DEBUG (8): Sending SETUP msg: threshold = 183 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 183 
 DEBUG (7): Sending SETUP msg: threshold = 183 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 183 
-DEBUG (10): Sending SETUP msg: threshold = 183 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 183 
+DEBUG (11): Sending SETUP msg: threshold = 183 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 183 
+DEBUG (13): Sending SETUP msg: threshold = 183 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 183 
 DEBUG (9): Sending SETUP msg: threshold = 183 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 183 
-DEBUG (12): Sending SETUP msg: threshold = 183 
-DEBUG (13): Received SETUP msg : from node 12 with threshold 183 
-DEBUG (13): Sending SETUP msg: threshold = 183 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 183 
 DEBUG (14): Sending SETUP msg: threshold = 183 
 DEBUG (2): Temperature measured : 132 
@@ -1906,18 +1831,16 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 197
 DEBUG (3): Sending SETUP msg: threshold = 197 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 197 
 DEBUG (2): Sending SETUP msg: threshold = 197 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 197 
-DEBUG (11): Sending SETUP msg: threshold = 197 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 197 
-DEBUG (7): Sending SETUP msg: threshold = 197 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 197 
-DEBUG (6): Sending SETUP msg: threshold = 197 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 197 
 DEBUG (10): Sending SETUP msg: threshold = 197 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 197 
-DEBUG (12): Sending SETUP msg: threshold = 197 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 197 
+DEBUG (6): Sending SETUP msg: threshold = 197 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 197 
 DEBUG (8): Sending SETUP msg: threshold = 197 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 197 
+DEBUG (7): Sending SETUP msg: threshold = 197 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 197 
+DEBUG (11): Sending SETUP msg: threshold = 197 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 197 
 DEBUG (13): Sending SETUP msg: threshold = 197 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 197 
@@ -1973,24 +1896,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 196
 DEBUG (3): Sending SETUP msg: threshold = 196 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 196 
 DEBUG (2): Sending SETUP msg: threshold = 196 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 196 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 196 
 DEBUG (10): Sending SETUP msg: threshold = 196 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 196 
-DEBUG (6): Sending SETUP msg: threshold = 196 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 196 
-DEBUG (13): Sending SETUP msg: threshold = 196 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 196 
-DEBUG (8): Sending SETUP msg: threshold = 196 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 196 
-DEBUG (7): Sending SETUP msg: threshold = 196 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 196 
 DEBUG (9): Sending SETUP msg: threshold = 196 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 196 
+DEBUG (13): Sending SETUP msg: threshold = 196 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 196 
+DEBUG (7): Sending SETUP msg: threshold = 196 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 196 
 DEBUG (11): Sending SETUP msg: threshold = 196 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 196 
+DEBUG (8): Sending SETUP msg: threshold = 196 
+DEBUG (6): Received SETUP msg : from node 11 with threshold 196 
+DEBUG (6): Sending SETUP msg: threshold = 196 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 196 
 DEBUG (14): Sending SETUP msg: threshold = 196 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 196 
-DEBUG (12): Sending SETUP msg: threshold = 196 
 DEBUG (2): Temperature measured : 154 
 DEBUG (3): Temperature measured : 83 
 DEBUG (4): Temperature measured : 158 
@@ -2029,22 +1950,20 @@ DEBUG (2): Received SETUP msg : from node 1 with threshold 176
 DEBUG (2): Sending SETUP msg: threshold = 176 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 176 
 DEBUG (10): Sending SETUP msg: threshold = 176 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 176 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 176 
+DEBUG (6): Sending SETUP msg: threshold = 176 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 176 
+DEBUG (8): Sending SETUP msg: threshold = 176 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 176 
 DEBUG (7): Sending SETUP msg: threshold = 176 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 176 
 DEBUG (11): Sending SETUP msg: threshold = 176 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 176 
 DEBUG (9): Sending SETUP msg: threshold = 176 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 176 
-DEBUG (8): Sending SETUP msg: threshold = 176 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 176 
-DEBUG (6): Sending SETUP msg: threshold = 176 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 176 
-DEBUG (13): Sending SETUP msg: threshold = 176 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 176 
-DEBUG (12): Sending SETUP msg: threshold = 176 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 176 
 DEBUG (14): Sending SETUP msg: threshold = 176 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 176 
+DEBUG (13): Sending SETUP msg: threshold = 176 
 DEBUG (2): Temperature measured : 85 
 DEBUG (3): Temperature measured : 135 
 DEBUG (4): Temperature measured : 23 
@@ -2081,24 +2000,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 185
 DEBUG (3): Sending SETUP msg: threshold = 185 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 185 
 DEBUG (2): Sending SETUP msg: threshold = 185 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 185 
-DEBUG (11): Sending SETUP msg: threshold = 185 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 185 
-DEBUG (6): Sending SETUP msg: threshold = 185 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 185 
-DEBUG (8): Sending SETUP msg: threshold = 185 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 185 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 185 
 DEBUG (10): Sending SETUP msg: threshold = 185 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 185 
+DEBUG (6): Sending SETUP msg: threshold = 185 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 185 
+DEBUG (11): Sending SETUP msg: threshold = 185 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 185 
 DEBUG (9): Sending SETUP msg: threshold = 185 
-DEBUG (7): Received SETUP msg : from node 11 with threshold 185 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 185 
 DEBUG (7): Sending SETUP msg: threshold = 185 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 185 
 DEBUG (13): Sending SETUP msg: threshold = 185 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 185 
+DEBUG (8): Sending SETUP msg: threshold = 185 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 185 
 DEBUG (14): Sending SETUP msg: threshold = 185 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 185 
-DEBUG (12): Sending SETUP msg: threshold = 185 
 DEBUG (2): Temperature measured : 76 
 DEBUG (3): Temperature measured : 98 
 DEBUG (4): Temperature measured : 57 
@@ -2135,22 +2052,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 155
 DEBUG (3): Sending SETUP msg: threshold = 155 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 155 
 DEBUG (2): Sending SETUP msg: threshold = 155 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 155 
-DEBUG (11): Sending SETUP msg: threshold = 155 
-DEBUG (7): Received SETUP msg : from node 3 with threshold 155 
-DEBUG (7): Sending SETUP msg: threshold = 155 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 155 
-DEBUG (6): Sending SETUP msg: threshold = 155 
 DEBUG (10): Received SETUP msg : from node 5 with threshold 155 
 DEBUG (10): Sending SETUP msg: threshold = 155 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 155 
 DEBUG (9): Sending SETUP msg: threshold = 155 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 155 
+DEBUG (7): Sending SETUP msg: threshold = 155 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 155 
+DEBUG (11): Sending SETUP msg: threshold = 155 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 155 
 DEBUG (8): Sending SETUP msg: threshold = 155 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 155 
-DEBUG (12): Sending SETUP msg: threshold = 155 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 155 
 DEBUG (13): Sending SETUP msg: threshold = 155 
+DEBUG (6): Received SETUP msg : from node 11 with threshold 155 
+DEBUG (6): Sending SETUP msg: threshold = 155 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 155 
 DEBUG (14): Sending SETUP msg: threshold = 155 
 DEBUG (2): Temperature measured : 144 
@@ -2164,19 +2079,13 @@ DEBUG (9): Temperature measured : 91
 DEBUG (10): Temperature measured : 45 
 DEBUG (11): Temperature measured : 38 
 DEBUG (12): Temperature measured : 159 
-DEBUG (12): Sending DATA msg: sender 12 , measured value 159 
 DEBUG (13): Temperature measured : 82 
 DEBUG (14): Temperature measured : 159 
 DEBUG (14): Sending DATA msg: sender 14 , measured value 159 
 DEBUG (8): Received DATA msg : from node 14 the measured value 159 of node 14 
 DEBUG (8): Sending DATA msg: sender 14 , measured value 159 
-DEBUG (7): Received DATA msg : from node 12 the measured value 159 of node 12 
-DEBUG (7): Sending DATA msg: sender 12 , measured value 159 
 DEBUG (4): Received DATA msg : from node 8 the measured value 159 of node 14 
 DEBUG (4): Sending DATA msg: sender 14 , measured value 159 
-DEBUG (3): Received DATA msg : from node 7 the measured value 159 of node 12 
-DEBUG (3): Sending DATA msg: sender 12 , measured value 159 
-DEBUG (1): Received DATA msg : from node 3 the measured value 159 of node 12 
 DEBUG (1): Received DATA msg : from node 4 the measured value 159 of node 14 
 DEBUG (2): Temperature measured : 138 
 DEBUG (3): Temperature measured : 145 
@@ -2205,18 +2114,18 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 158
 DEBUG (3): Sending SETUP msg: threshold = 158 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 158 
 DEBUG (2): Sending SETUP msg: threshold = 158 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 158 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 158 
+DEBUG (10): Sending SETUP msg: threshold = 158 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 158 
+DEBUG (6): Sending SETUP msg: threshold = 158 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
+DEBUG (9): Sending SETUP msg: threshold = 158 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 158 
+DEBUG (13): Sending SETUP msg: threshold = 158 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 158 
 DEBUG (11): Sending SETUP msg: threshold = 158 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 158 
 DEBUG (7): Sending SETUP msg: threshold = 158 
-DEBUG (6): Received SETUP msg : from node 3 with threshold 158 
-DEBUG (6): Sending SETUP msg: threshold = 158 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 158 
-DEBUG (10): Sending SETUP msg: threshold = 158 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 158 
-DEBUG (9): Sending SETUP msg: threshold = 158 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 158 
-DEBUG (12): Sending SETUP msg: threshold = 158 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 158 
 DEBUG (8): Sending SETUP msg: threshold = 158 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 158 
@@ -2236,14 +2145,17 @@ DEBUG (12): Temperature measured : 82
 DEBUG (13): Temperature measured : 172 
 DEBUG (13): Sending DATA msg: sender 13 , measured value 172 
 DEBUG (14): Temperature measured : 113 
-DEBUG (3): Received DATA msg : from node 11 the measured value 166 of node 11 
-DEBUG (3): Sending DATA msg: sender 11 , measured value 166 
+DEBUG (6): Received DATA msg : from node 11 the measured value 166 of node 11 
+DEBUG (6): Sending DATA msg: sender 11 , measured value 166 
 DEBUG (10): Received DATA msg : from node 13 the measured value 172 of node 13 
 DEBUG (10): Sending DATA msg: sender 13 , measured value 172 
-DEBUG (1): Received DATA msg : from node 3 the measured value 166 of node 11 
-DEBUG (5): Received DATA msg : from node 10 the measured value 172 of node 13 
-DEBUG (5): Sending DATA msg: sender 13 , measured value 172 
-DEBUG (1): Received DATA msg : from node 5 the measured value 172 of node 13 
+DEBUG (2): Received DATA msg : from node 6 the measured value 166 of node 11 
+DEBUG (2): Sending DATA msg: sender 11 , measured value 166 
+DEBUG (2): Received DATA msg : from node 10 the measured value 172 of node 13 
+DEBUG (2): Busy -> put in queue DATA msg: sender 11 , measured value 166 
+DEBUG (1): Received DATA msg : from node 2 the measured value 166 of node 11 
+DEBUG (2): Forward DATA msg from queue 
+DEBUG (1): Received DATA msg : from node 2 the measured value 172 of node 13 
 DEBUG (2): Temperature measured : 120 
 DEBUG (3): Temperature measured : 53 
 DEBUG (4): Temperature measured : 14 
@@ -2271,22 +2183,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 173
 DEBUG (3): Sending SETUP msg: threshold = 173 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 173 
 DEBUG (2): Sending SETUP msg: threshold = 173 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 173 
+DEBUG (8): Sending SETUP msg: threshold = 173 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 173 
+DEBUG (7): Sending SETUP msg: threshold = 173 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 173 
 DEBUG (10): Sending SETUP msg: threshold = 173 
 DEBUG (6): Received SETUP msg : from node 2 with threshold 173 
 DEBUG (6): Sending SETUP msg: threshold = 173 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 173 
 DEBUG (9): Sending SETUP msg: threshold = 173 
-DEBUG (11): Received SETUP msg : from node 6 with threshold 173 
-DEBUG (11): Sending SETUP msg: threshold = 173 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 173 
-DEBUG (8): Sending SETUP msg: threshold = 173 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 173 
-DEBUG (7): Sending SETUP msg: threshold = 173 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 173 
 DEBUG (13): Sending SETUP msg: threshold = 173 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 173 
-DEBUG (12): Sending SETUP msg: threshold = 173 
+DEBUG (11): Received SETUP msg : from node 3 with threshold 173 
+DEBUG (11): Sending SETUP msg: threshold = 173 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 173 
 DEBUG (14): Sending SETUP msg: threshold = 173 
 DEBUG (2): Temperature measured : 100 
@@ -2304,9 +2214,9 @@ DEBUG (11): Temperature measured : 6
 DEBUG (12): Temperature measured : 45 
 DEBUG (13): Temperature measured : 150 
 DEBUG (14): Temperature measured : 171 
-DEBUG (1): Received DATA msg : from node 3 the measured value 173 of node 3 
 DEBUG (2): Received DATA msg : from node 10 the measured value 177 of node 10 
 DEBUG (2): Sending DATA msg: sender 10 , measured value 177 
+DEBUG (1): Received DATA msg : from node 3 the measured value 173 of node 3 
 DEBUG (1): Received DATA msg : from node 2 the measured value 177 of node 10 
 DEBUG (2): Temperature measured : 113 
 DEBUG (3): Temperature measured : 135 
@@ -2344,24 +2254,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 189
 DEBUG (3): Sending SETUP msg: threshold = 189 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 189 
 DEBUG (2): Sending SETUP msg: threshold = 189 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 189 
-DEBUG (8): Sending SETUP msg: threshold = 189 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 189 
-DEBUG (7): Sending SETUP msg: threshold = 189 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 189 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 189 
 DEBUG (10): Sending SETUP msg: threshold = 189 
-DEBUG (11): Received SETUP msg : from node 3 with threshold 189 
-DEBUG (11): Sending SETUP msg: threshold = 189 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 189 
-DEBUG (13): Sending SETUP msg: threshold = 189 
-DEBUG (12): Received SETUP msg : from node 13 with threshold 189 
-DEBUG (12): Sending SETUP msg: threshold = 189 
-DEBUG (14): Received SETUP msg : from node 8 with threshold 189 
-DEBUG (14): Sending SETUP msg: threshold = 189 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 189 
 DEBUG (9): Sending SETUP msg: threshold = 189 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 189 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 189 
 DEBUG (6): Sending SETUP msg: threshold = 189 
+DEBUG (7): Received SETUP msg : from node 4 with threshold 189 
+DEBUG (7): Sending SETUP msg: threshold = 189 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 189 
+DEBUG (8): Sending SETUP msg: threshold = 189 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 189 
+DEBUG (13): Sending SETUP msg: threshold = 189 
+DEBUG (11): Received SETUP msg : from node 6 with threshold 189 
+DEBUG (11): Sending SETUP msg: threshold = 189 
+DEBUG (14): Received SETUP msg : from node 8 with threshold 189 
+DEBUG (14): Sending SETUP msg: threshold = 189 
 DEBUG (2): Temperature measured : 101 
 DEBUG (3): Temperature measured : 115 
 DEBUG (4): Temperature measured : 94 
@@ -2400,20 +2308,18 @@ DEBUG (2): Received SETUP msg : from node 1 with threshold 170
 DEBUG (2): Sending SETUP msg: threshold = 170 
 DEBUG (10): Received SETUP msg : from node 2 with threshold 170 
 DEBUG (10): Sending SETUP msg: threshold = 170 
+DEBUG (6): Received SETUP msg : from node 2 with threshold 170 
+DEBUG (6): Sending SETUP msg: threshold = 170 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 170 
+DEBUG (9): Sending SETUP msg: threshold = 170 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 170 
+DEBUG (13): Sending SETUP msg: threshold = 170 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 170 
 DEBUG (11): Sending SETUP msg: threshold = 170 
 DEBUG (7): Received SETUP msg : from node 3 with threshold 170 
 DEBUG (7): Sending SETUP msg: threshold = 170 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 170 
-DEBUG (9): Sending SETUP msg: threshold = 170 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 170 
-DEBUG (12): Sending SETUP msg: threshold = 170 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 170 
 DEBUG (8): Sending SETUP msg: threshold = 170 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 170 
-DEBUG (13): Sending SETUP msg: threshold = 170 
-DEBUG (6): Received SETUP msg : from node 11 with threshold 170 
-DEBUG (6): Sending SETUP msg: threshold = 170 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 170 
 DEBUG (14): Sending SETUP msg: threshold = 170 
 DEBUG (2): Temperature measured : 27 
@@ -2456,22 +2362,20 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 192
 DEBUG (3): Sending SETUP msg: threshold = 192 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 192 
 DEBUG (2): Sending SETUP msg: threshold = 192 
-DEBUG (8): Received SETUP msg : from node 4 with threshold 192 
-DEBUG (8): Sending SETUP msg: threshold = 192 
-DEBUG (7): Received SETUP msg : from node 4 with threshold 192 
-DEBUG (7): Sending SETUP msg: threshold = 192 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 192 
 DEBUG (11): Sending SETUP msg: threshold = 192 
+DEBUG (7): Received SETUP msg : from node 3 with threshold 192 
+DEBUG (7): Sending SETUP msg: threshold = 192 
 DEBUG (6): Received SETUP msg : from node 3 with threshold 192 
 DEBUG (6): Sending SETUP msg: threshold = 192 
-DEBUG (10): Received SETUP msg : from node 5 with threshold 192 
+DEBUG (10): Received SETUP msg : from node 2 with threshold 192 
 DEBUG (10): Sending SETUP msg: threshold = 192 
 DEBUG (9): Received SETUP msg : from node 5 with threshold 192 
 DEBUG (9): Sending SETUP msg: threshold = 192 
+DEBUG (8): Received SETUP msg : from node 4 with threshold 192 
+DEBUG (8): Sending SETUP msg: threshold = 192 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 192 
 DEBUG (14): Sending SETUP msg: threshold = 192 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 192 
-DEBUG (12): Sending SETUP msg: threshold = 192 
 DEBUG (13): Received SETUP msg : from node 10 with threshold 192 
 DEBUG (13): Sending SETUP msg: threshold = 192 
 DEBUG (2): Temperature measured : 20 
@@ -2510,24 +2414,22 @@ DEBUG (3): Received SETUP msg : from node 1 with threshold 151
 DEBUG (3): Sending SETUP msg: threshold = 151 
 DEBUG (2): Received SETUP msg : from node 1 with threshold 151 
 DEBUG (2): Sending SETUP msg: threshold = 151 
-DEBUG (10): Received SETUP msg : from node 2 with threshold 151 
-DEBUG (10): Sending SETUP msg: threshold = 151 
-DEBUG (6): Received SETUP msg : from node 2 with threshold 151 
-DEBUG (6): Sending SETUP msg: threshold = 151 
-DEBUG (9): Received SETUP msg : from node 5 with threshold 151 
-DEBUG (9): Sending SETUP msg: threshold = 151 
-DEBUG (13): Received SETUP msg : from node 10 with threshold 151 
-DEBUG (13): Sending SETUP msg: threshold = 151 
 DEBUG (8): Received SETUP msg : from node 4 with threshold 151 
 DEBUG (8): Sending SETUP msg: threshold = 151 
 DEBUG (7): Received SETUP msg : from node 4 with threshold 151 
 DEBUG (7): Sending SETUP msg: threshold = 151 
 DEBUG (11): Received SETUP msg : from node 3 with threshold 151 
 DEBUG (11): Sending SETUP msg: threshold = 151 
-DEBUG (12): Received SETUP msg : from node 7 with threshold 151 
-DEBUG (12): Sending SETUP msg: threshold = 151 
+DEBUG (6): Received SETUP msg : from node 3 with threshold 151 
+DEBUG (6): Sending SETUP msg: threshold = 151 
 DEBUG (14): Received SETUP msg : from node 8 with threshold 151 
 DEBUG (14): Sending SETUP msg: threshold = 151 
+DEBUG (10): Received SETUP msg : from node 5 with threshold 151 
+DEBUG (10): Sending SETUP msg: threshold = 151 
+DEBUG (9): Received SETUP msg : from node 5 with threshold 151 
+DEBUG (9): Sending SETUP msg: threshold = 151 
+DEBUG (13): Received SETUP msg : from node 10 with threshold 151 
+DEBUG (13): Sending SETUP msg: threshold = 151 
 DEBUG (2): Temperature measured : 142 
 DEBUG (3): Temperature measured : 167 
 DEBUG (3): Sending DATA msg: sender 3 , measured value 167 
