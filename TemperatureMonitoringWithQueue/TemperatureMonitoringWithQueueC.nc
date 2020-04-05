@@ -67,7 +67,7 @@ implementation
     //Initialize variables  
     routeBackNode=1;
     sendBusy=FALSE;
-    progressiveNum=65533;
+    progressiveNum=0;
     
     //Start the timers
     startTimer();
