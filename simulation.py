@@ -2,20 +2,18 @@
 
 from TOSSIM import *
 import sys
-import os
 
 numNodes = 0
 topologyFile = ""
 noiseFile = ""
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
 
 if len(sys.argv) != 4:
   print("Usage: python %s <nodes_amount> <topology_file> <noise_file>" % sys.argv[0])
   sys.exit(1)
 else:
   numNodes = int(sys.argv[1])
-  topologyFile = os.path.join(script_dir, sys.argv[2])
+  topologyFile = sys.argv[2]
   noiseFile = sys.argv[3]
 
 try:
