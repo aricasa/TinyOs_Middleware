@@ -16,27 +16,30 @@
 
 #define OVERFLOW_TOLERANCE 5
 
-/* DATA message : message sent by the node "node_id" to the sink node
- * containing the temperature "temperature" measured by the node "sender"
+/**
+ * DATA message
+ * 
+ * Message sent by the node "node_id" to the sink node.
+ * It contains the temperature "temperature" measured by the node "sender".
  */
-typedef nx_struct DATAmsg
-{
+typedef nx_struct DATAmsg {
   nx_uint16_t node_id;
   nx_uint16_t temperature;
   nx_uint16_t sender;
 
 } DATAmsg;
 
-/* SETUP message : message sent by the node "node_id"
- * containing the new threshold "threshold" communicated by the father node "father"
+/**
+ * SETUP message
+ * 
+ * Message sent by the node "node_id".
+ * It contains the new threshold "threshold" communicated by the father node "father"
  */
-typedef nx_struct SETUPmsg
-{
+typedef nx_struct SETUPmsg {
 	nx_uint16_t progressiveNum;
 	nx_uint16_t node_id;
 	nx_uint16_t threshold;
 	nx_uint16_t father;
-
 } SETUPmsg;
 
 #endif

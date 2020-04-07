@@ -21,6 +21,7 @@ implementation {
   
   /* Node communication components */
   components ActiveMessageC, new AMSenderC(AM_TEMPERATURE_MONITOR), new AMReceiverC(AM_TEMPERATURE_MONITOR);
+  
   App.AMSend -> AMSenderC;
   App.Receive -> AMReceiverC;
   App.Packet -> AMSenderC;
@@ -31,6 +32,7 @@ implementation {
   components new PoolC(message_t, QUEUE_LENGTH) as UARTMessagePoolP,
     new QueueC(message_t*, QUEUE_LENGTH) as UARTQueueP,
     new QueueC(uint8_t, QUEUE_LENGTH) as packetsLengthQueueP;
+	
   App.UARTMessagePool -> UARTMessagePoolP;
   App.UARTQueue -> UARTQueueP;
   App.packetsLengthQueue -> packetsLengthQueueP;
