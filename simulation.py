@@ -7,7 +7,7 @@ numNodes = 0
 topologyFile = ""
 noiseFile = ""
 
-if len(sys.argv) != 3:
+if len(sys.argv) != 4:
 	print("Usage: python %s <nodes_amount> <topology_file> <noise_file>" % sys.argv[0])
 	sys.exit(1)
 else:
@@ -40,7 +40,7 @@ r = t.radio()
 for line in topology:
   s = line.split()
   if s:
-    print(" src" + s[0] + " dest" + s[1] + " gain" + s[2]);
+    print(" src" + s[0] + ", dest" + s[1] + ", gain" + s[2]);
     r.add(int(s[0]), int(s[1]), float(s[2]))
 
 t.addChannel("Temp", sys.stdout)
@@ -56,7 +56,7 @@ for line in noise:
       t.getNode(i).addNoiseTraceReading(val)
 
 for i in range(1, numNodes + 1):
-  print("Creating noise model for " + i);
+  print("Creating noise model for node " + i);
   t.getNode(i).createNoiseModel()
 
 # Add nodes
