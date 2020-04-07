@@ -2,30 +2,33 @@
 
 from TOSSIM import *
 import sys
+import os
 
 numNodes = 0
 topologyFile = ""
 noiseFile = ""
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 if len(sys.argv) != 4:
-	print("Usage: python %s <nodes_amount> <topology_file> <noise_file>" % sys.argv[0])
-	sys.exit(1)
+  print("Usage: python %s <nodes_amount> <topology_file> <noise_file>" % sys.argv[0])
+  sys.exit(1)
 else:
-	numNodes = sys.argv[1]
-	topologyFile = sys.argv[2]
-	noiseFile = sys.argv[3]
+  numNodes = int(sys.argv[1])
+  topologyFile = os.path.join(script_dir, sys.argv[2])
+  noiseFile = sys.argv[3]
 
 try:
 	topology = open(topologyFile, "r")
 except IOError as e:
     print("Can't open topology file '%s'" % topologyFile)
-	sys.exit(1)
+    sys.exit(1)
 
 try:
 	noise = open(noiseFile, "r")
 except IOError as e:
     print("Can't open noise file '%s'" % noiseFile)
-	sys.exit(1)
+    sys.exit(1)
 
 print("******************************************************************************")
 print("*                                                                            *")
@@ -56,7 +59,7 @@ for line in noise:
       t.getNode(i).addNoiseTraceReading(val)
 
 for i in range(1, numNodes + 1):
-  print("Creating noise model for node " + i);
+  print("Creating noise model for node " + str(i));
   t.getNode(i).createNoiseModel()
 
 # Add nodes
