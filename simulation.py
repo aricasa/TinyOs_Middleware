@@ -52,15 +52,15 @@ for line in noise:
   str1 = line.strip()
   if str1:
     val = int(str1)
-    for i in range(1, nunNodes+1):
+    for i in range(1, numNodes + 1):
       t.getNode(i).addNoiseTraceReading(val)
 
-for i in range(1, nunNodes+1):
+for i in range(1, numNodes + 1):
   print("Creating noise model for " + i);
   t.getNode(i).createNoiseModel()
 
 # Add nodes
-for i in range(1, nunNodes+1):
+for i in range(1, numNodes + 1):
   t.getNode(i).bootAtTime(100001 + i*100000);
 
 t.runNextEvent();
