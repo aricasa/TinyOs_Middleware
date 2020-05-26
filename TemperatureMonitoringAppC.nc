@@ -1,9 +1,9 @@
-#include "TemperatureMonitoringWithQueue.h"
+#include "TemperatureMonitoring.h"
 
-configuration TemperatureMonitoringWithQueueAppC { }
+configuration TemperatureMonitoringAppC { }
 implementation {
 
-  components MainC, TemperatureMonitoringWithQueueC as App;
+  components MainC, TemperatureMonitoringC as App;
   
   App.Boot -> MainC;
   

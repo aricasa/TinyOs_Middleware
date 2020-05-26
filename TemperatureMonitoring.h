@@ -23,10 +23,9 @@
  * It contains the temperature "temperature" measured by the node "sender".
  */
 typedef nx_struct DATAmsg {
-  nx_uint16_t node_id;
+  nx_uint8_t node_id;
   nx_uint16_t temperature;
-  nx_uint16_t sender;
-
+  nx_uint8_t sender;
 } DATAmsg;
 
 /**
@@ -37,9 +36,8 @@ typedef nx_struct DATAmsg {
  */
 typedef nx_struct SETUPmsg {
 	nx_uint16_t progressiveNum;
-	nx_uint16_t node_id;
+	nx_uint8_t node_id;
 	nx_uint16_t threshold;
-	nx_uint16_t father;
 } SETUPmsg;
 
 #endif
