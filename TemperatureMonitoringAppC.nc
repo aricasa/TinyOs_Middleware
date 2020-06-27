@@ -29,12 +29,12 @@ implementation {
   App.RadioControl -> ActiveMessageC;
 
   /* Components that store outgoing messages when there's already a message in process */
-  components new PoolC(message_t, QUEUE_LENGTH) as UARTMessagePoolP,
-    new QueueC(message_t*, QUEUE_LENGTH) as UARTQueueP,
-    new QueueC(uint8_t, QUEUE_LENGTH) as packetsLengthQueueP;
+  components new PoolC(message_t, QUEUE_LENGTH) as MessagePoolP,
+    new QueueC(message_t*, QUEUE_LENGTH) as QueueP,
+    new QueueC(uint8_t, QUEUE_LENGTH) as PacketsLengthQueueP;
 	
-  App.UARTMessagePool -> UARTMessagePoolP;
-  App.UARTQueue -> UARTQueueP;
-  App.packetsLengthQueue -> packetsLengthQueueP;
+  App.MessagePool -> MessagePoolP;
+  App.Queue -> QueueP;
+  App.PacketsLengthQueue -> PacketsLengthQueueP;
 
 }

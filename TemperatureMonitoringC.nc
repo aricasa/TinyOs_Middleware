@@ -15,9 +15,9 @@ module TemperatureMonitoringC @safe()
     interface AMSend;
     interface Packet;
     interface AMPacket;
-    interface Queue<message_t *> as UARTQueue;
-    interface Queue<uint8_t> as packetsLengthQueue;
-    interface Pool<message_t> as UARTMessagePool;
+    interface Queue<message_t *> as Queue;
+    interface Queue<uint8_t> as PacketsLengthQueue;
+    interface Pool<message_t> as MessagePool;
 
 	//Interfaces for temperature monitoring logic:
     interface Timer<TMilli> as TimerGenerateNewThreshold;
@@ -29,8 +29,8 @@ module TemperatureMonitoringC @safe()
 implementation 
 {
   //Prototypes
-  task void uartSendTask();
   static void startTimer();
+  void sendMsgQueue();
   void sendSETUPMessage(uint8_t node_id , uint16_t thresholdNew , uint16_t progNum);
   void sendLaterSETUPMessage(uint8_t node_id , uint16_t thresholdNew , uint16_t progNum);
   void sendDATAMessage(uint8_t node_id , uint16_t temperatureMsg, uint8_t senderMsg);
@@ -60,7 +60,7 @@ implementation
   /* On bootup, initialize radio communications, and some state variables. */
   event void Boot.booted() 
   {
-    // Beginning our initialization phases:
+    //Beginning our initialization phases:
     if (call RadioControl.start() == SUCCESS)
       dbg("Boot", "Application booted \n");
       
@@ -163,7 +163,7 @@ implementation
   void sendLaterSETUPMessage(uint8_t node_id , uint16_t thresholdNew , uint16_t progNum)
   {
   	SETUPmsg* msg;
-	message_t *newmsg = call UARTMessagePool.get();
+	message_t *newmsg = call MessagePool.get();
 		 
 	if (newmsg == NULL) 
 	{
@@ -179,9 +179,9 @@ implementation
 	msg->threshold = thresholdNew;
 	msg->progressiveNum = progNum;
 
-	if (call UARTQueue.enqueue(newmsg) != SUCCESS || call packetsLengthQueue.enqueue(sizeof(SETUPmsg)) != SUCCESS) 
+	if (call Queue.enqueue(newmsg) != SUCCESS || call PacketsLengthQueue.enqueue(sizeof(SETUPmsg)) != SUCCESS) 
 	{
-		//call UARTMessagePool.put(newmsg);		       
+		call MessagePool.put(newmsg);		       
 		return;
 	}
   }
@@ -223,7 +223,7 @@ implementation
   void sendLaterDATAMessage(uint8_t node_id , uint16_t temperatureMsg, uint8_t senderMsg)
   {
 	DATAmsg* msg;
-	message_t *newmsg = call UARTMessagePool.get();
+	message_t *newmsg = call MessagePool.get();
 	if (newmsg == NULL) 
 	{
 		// drop the message on the floor if we run out of queue space.
@@ -238,9 +238,9 @@ implementation
 	msg->temperature = temperatureMsg;
 	msg->sender = senderMsg;
 
-	if (call UARTQueue.enqueue(newmsg) != SUCCESS || call packetsLengthQueue.enqueue(sizeof(DATAmsg)) != SUCCESS) 
+	if (call Queue.enqueue(newmsg) != SUCCESS || call PacketsLengthQueue.enqueue(sizeof(DATAmsg)) != SUCCESS) 
 	{
-		call UARTMessagePool.put(newmsg);		        
+		call MessagePool.put(newmsg);		        
 		return;
 	}
   }
@@ -252,11 +252,11 @@ implementation
 	if(error!=SUCCESS)
 		dbg("Temp" , "SendDone is a FAILURE \n");
 	sendBusy = FALSE;
-	if (call UARTQueue.empty() == FALSE) 
+	if (call Queue.empty() == FALSE) 
 	{
 		// We just finished a send, and the uart queue is
 	    // non-empty.  Let's start a new one.
-	    message_t *queuemsg = call UARTQueue.dequeue();
+	    message_t *queuemsg = call Queue.dequeue();
 	    if (queuemsg == NULL) 
 	    {
 	    	dbg("Failures", "SendDone : message failed to send \n");
@@ -265,21 +265,21 @@ implementation
 	    
 	    //Upload the message dequeued in a buffer
 	    memcpy(&sendBuffer, queuemsg, sizeof(message_t));
-	    if (call UARTMessagePool.put(queuemsg) != SUCCESS) 
+	    if (call MessagePool.put(queuemsg) != SUCCESS) 
 	    {
 	    	dbg("Failures", "SendDone : message failed to send \n");
 	        return;
 	    }
 	    
 	    //Send the message in the buffer
-	    post uartSendTask();
+	    sendMsgQueue();
 	}
   }
   
   /* Send message uploaded in buffer */
-  task void uartSendTask() 
+  void sendMsgQueue() 
   { 
-  	uint8_t length = call packetsLengthQueue.dequeue();
+  	uint8_t length = call PacketsLengthQueue.dequeue();
   	
   	if(length == sizeof(DATAmsg))
   	{
